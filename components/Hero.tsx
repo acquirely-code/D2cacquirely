@@ -9,7 +9,7 @@ import Client1 from "@/app/assests/Client1.jpg";
 import Client2 from "@/app/assests/Client2.jpg";
 import Client3 from "@/app/assests/Client3.jpg";
 import Client4 from "@/app/assests/Clieent4.jpg";
-import heromainimage from "@/app/assests/landinghero.png";
+import heromainimage from "@/app/assests/dashboard.webp";
 
 const heroHighlights = [
   "We do not just run Meta Ads campaigns. We build performance marketing systems.",
