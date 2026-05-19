@@ -1,0 +1,49 @@
+import "./globals.css";
+import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import Script from "next/script";
+import { GoogleTagManager } from '@next/third-parties/google';
+
+const defaultUrl = process.env.VERCEL_URL
+  ? `https://${process.env.VERCEL_URL}`
+  : "http://localhost:3000";
+
+export const metadata: Metadata = {
+  metadataBase: new URL(defaultUrl),
+  title: "Meta Ads for Qualified Leads | Acquirely.",
+  description:
+    "Scale Meta Ads with better lead quality, lower CPQL, and predictable pipelines using Acquirely’s A3 Flywheel framework.",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        {/* Meta Pixel Script */}
+      </head>
+      <body className="min-h-screen bg-[#f7f9fc] text-slate-950 antialiased">
+        <GoogleTagManager gtmId="GTM-WJVQR59V" />
+        
+        {/* Meta Pixel Fallback */}
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: "none" }}
+            src="https://www.facebook.com/tr?id=1087526939518742&ev=PageView&noscript=1"
+            alt=""
+          />
+        </noscript>
+
+        {children}
+        <Analytics />
+        <SpeedInsights />
+      </body>
+    </html>
+  );
+}
