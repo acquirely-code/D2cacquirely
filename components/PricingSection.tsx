@@ -10,11 +10,11 @@ const growthFeatures = [
 ];
 
 const scaleFeatures = [
-  "Aggressive A3 scaling cadence (weekly)",
-  "Multi-region campaign architecture",
+  "Weekly creative refresh + scaling decisions based on ROAS thresholds",
+  "Multi-funnel structure: cold, warm & retargeting audiences managed separately",
   "Micro-analysis: day, hour & region redistribution",
-  "Dedicated Slack channel — founder-direct access",
-  "Monthly growth strategy session"
+  "Dedicated Whatsapp group - real time communication",
+  "Monthly CAC/LTV review + next 30-day growth plan"
 ];
 
 export default function PricingSection() {
