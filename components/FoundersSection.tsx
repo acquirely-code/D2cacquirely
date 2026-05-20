@@ -42,7 +42,7 @@ const founders = [
     mainimage: mausamarora,
     Linkedin: "https://in.linkedin.com/in/mausamarora",
     description:
-      "Mausam spent 12 years inside education — building curricula, publishing 300+ books, and reaching 2,000+ schools. That journey taught him one thing: great products don't grow themselves. He built Acquirely to turn scattered ad spend into acquisition systems that compound.",
+      "For 11 years, Mausam scaled his own business the hard way — cold calls, trade shows, relationship by relationship. Then one insight changed everything: businesses that make the right people come to them grow differently. Predictably. At scale. That obsession with inbound systems is what Acquirely is built on. He's not an agency guy who learned ads — he's a founder who needed this system, built it, and now builds it for others.",
     bullets: [
       "Founder-level understanding of what happens before and after the click",
       "Managed $3.5M+ in annual ad spend",

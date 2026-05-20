@@ -14,7 +14,7 @@ const benefitCards = [
   {
     title: "Data Compounds",
     description:
-      "Every test adds to your brand's intelligence library. Month 6 campaigns are 10x smarter than Month 1 because they're built on real performance data.",
+      "Every creative test adds to your brand's intelligence library — winning hooks, audience signals, format insights. By Month 6, your campaigns aren't guessing. They're running on 6 months of compounded performance data your competitors don't have.",
     value: "10x",
     label: "Smarter by Month 6",
     icon: BarChart3,
@@ -24,9 +24,9 @@ const benefitCards = [
   {
     title: "Revenue Compounds",
     description:
-      "Every test adds to your brand's intelligence library. Month 6 campaigns are 10x smarter than Month 1 because they're built on real performance data.",
-    value: "3-5x",
-    label: "Revenue Growth in 6 Months",
+      "As the A3 system locks winning creatives and stabilises ROAS, scaling spend stops feeling like a gamble. Budgets increase with confidence because the system has already proven what works — revenue grows because efficiency grows first.",
+    value: "3x",
+    label: "Average revenue growth in 90 days",
     icon: TrendingUp,
     iconText: null,
     image: chart,
@@ -34,9 +34,9 @@ const benefitCards = [
   {
     title: "CAC Compounds Down",
     description:
-      "Every test adds to your brand's intelligence library. Month 6 campaigns are 10x smarter than Month 1 because they're built on real performance data.",
-    value: "-40%",
-    label: "Average CAC Reduction",
+      "Every cycle eliminates underperforming creatives and reallocates budget to proven winners. Over time, you're spending less to acquire the same customer — not because of luck, but because the system gets tighter every month.",
+    value: "Consistent",
+    label: "CAC improvement month over month",
     icon: null,
     iconText: "Rs",
     image: ruppe,
@@ -114,7 +114,7 @@ function BenefitCard({
 }) {
   return (
     <div className="rounded-[6px] border border-black/10 bg-white px-6 py-10 text-center sm:px-10 sm:py-[52px]">
-      <div className="mx-auto grid h-[72px] w-[75px] place-items-center rounded-[5px] bg-[#5652E9]">
+      <div className="mx-auto grid h-[72px] w-[85px] place-items-center rounded-[5px] bg-[#5652E9]">
         {image ? (
           <Image src={image} alt={title} className="h-10 w-10" />
         ) : (
@@ -123,11 +123,11 @@ function BenefitCard({
           </span>
         )}
       </div>
-      <h3 className="mt-5 text-[20px] font-semibold leading-7 text-black">{title}</h3>
-      <p className="mx-auto mt-2 max-w-[305px] text-[16px] font-semibold leading-[22px] text-[#7B8BA0]">
+      <h3 className="mt-5 text-[18px] font-opensans font-semibold leading-7 text-black">{title}</h3>
+      <p className="mx-auto mt-2 max-w-[335px] text-[16px] font-semibold leading-[22px] text-[#7B8BA0]">
         {description}
       </p>
-      <div className="mx-auto mt-7 w-full max-w-[275px] border-t border-black/10 pt-5">
+      <div className="mx-auto mt-7 w-full max-w-[295px] border-t border-black/10 pt-5">
         <div className="text-[30px] font-extrabold leading-9 text-[#252525]">{value}</div>
         <p className="mt-1 text-[14px] leading-5 text-[#707984]">{label}</p>
       </div>
@@ -162,7 +162,7 @@ export default function FlywheelProofSection() {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-6 lg:grid-cols-3">
+        <div className="mt-12 grid gap-4 lg:grid-cols-3">
           {benefitCards.map((card) => (
             <BenefitCard key={card.title} {...card} />
           ))}
