@@ -682,7 +682,7 @@ export default function DoneForYouLandingPage() {
                 When there's no system behind your ads, more budget just means more wasted spend.
               </p>
               <p className="mt-4 text-lg font-bold leading-7 text-[#1E293B] sm:text-xl">
-                The businesses winning on Meta in 2025 aren't the ones with the biggest budgets they're the ones with the tightest systems.
+                The businesses winning on Meta in 2026 aren't the ones with the biggest budgets they're the ones with the tightest systems.
               </p>
             </div>
           </div>
