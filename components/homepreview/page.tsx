@@ -178,10 +178,9 @@ const testimonials = [
 ];
 
 export default function HomePage() {
-  // State for interactivity
   const [activeTab, setActiveTab] = useState("All services");
   const [activeServiceCard, setActiveServiceCard] = useState(1);
-  const [activePhase, setActivePhase] = useState(2); // Default to middle card
+  const [activePhase, setActivePhase] = useState(2); 
 
   const tabs = ["All services", "Paid ads", "Funnel", "Scale"];
 
@@ -192,40 +191,43 @@ export default function HomePage() {
   return (
     <main className="overflow-hidden bg-white text-[#0F172A]">
       {/* HERO SECTION */}
-      <section className="relative overflow-hidden bg-white pb-[160px] pt-[96px]">
+      <section className="relative overflow-hidden bg-white pb-16 pt-24 md:pb-[160px] md:pt-[96px]">
         {/* Premium Background Layers */}
-        <div className="absolute right-[-5%] top-[-10%] z-0 h-[600px] w-[600px] rounded-full bg-blue-600/10 blur-[60px]"></div>
-        <div className="absolute bottom-[-10%] left-[-5%] z-0 h-[600px] w-[600px] rounded-full bg-purple-500/10 blur-[50px]"></div>
+        <div className="absolute right-[-5%] top-[-10%] z-0 h-[300px] w-[300px] rounded-full bg-blue-600/10 blur-[60px] md:h-[600px] md:w-[600px]"></div>
+        <div className="absolute bottom-[-10%] left-[-5%] z-0 h-[300px] w-[300px] rounded-full bg-purple-500/10 blur-[50px] md:h-[600px] md:w-[600px]"></div>
 
-        <div className="relative z-10 mx-auto max-w-[1440px] px-[80px]">
+        {/* FIXED: Reduced horizontal padding on mobile from px-[80px] to px-5 */}
+        <div className="relative z-10 mx-auto max-w-[1440px] px-5 md:px-10 lg:px-[80px]">
           <Navbar />
 
-          <div className="mt-12 grid items-center gap-12 lg:grid-cols-12 lg:mt-20">
+          <div className="mt-10 grid items-center gap-10 lg:grid-cols-12 lg:mt-20 lg:gap-12">
             {/* Left Content Column */}
             <div className="flex flex-col items-center text-center lg:col-span-7 lg:items-start lg:text-left">
-              <h1 className="font-Montserrat text-4xl font-extrabold leading-[1.1] tracking-tight text-[#0F172A] sm:text-5xl md:text-6xl lg:text-6xl xl:text-6xl">
+              {/* FIXED: Scaled down text size for mobile */}
+              <h1 className="font-Montserrat text-3xl font-extrabold leading-[1.2] tracking-tight text-[#0F172A] sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl">
                 Scale Profitably With A
-                <span className="ml-4 bg-gradient-to-r from-[#6366F1] to-[#F97316] bg-clip-text text-transparent">
+                <span className="block mt-2 bg-gradient-to-r from-[#6366F1] to-[#F97316] bg-clip-text text-transparent sm:inline sm:mt-0 sm:ml-4">
                   Proven Performance Marketing <span className="text-[#0F172A]">Agency</span>
                 </span>
               </h1>
 
-              <p className="mt-6 max-w-[600px] font-opensans text-base leading-relaxed text-[#475569] sm:text-lg md:mt-8 md:text-xl">
+              <p className="mt-5 max-w-[600px] font-opensans text-base leading-relaxed text-[#475569] sm:text-lg md:mt-8 md:text-xl">
                 Grow from ₹10L to ₹1Cr+ monthly with data-driven Meta Ads
               </p>
 
-              <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row md:mt-10">
-                <button className="inline-flex items-center gap-3 rounded-full bg-[linear-gradient(102.78deg,#6366F1_0%,#4F46E5_100%)] px-8 py-4 text-base font-bold text-white shadow-[0_10px_15px_-3px_rgba(99,102,241,0.25)] transition hover:scale-[1.02] md:px-10 md:py-5 md:text-lg">
+              <div className="mt-8 flex flex-col items-center gap-5 sm:flex-row md:mt-10 md:gap-4">
+                {/* FIXED: Padding scaled for mobile buttons */}
+                <button className="inline-flex w-full items-center justify-center gap-3 rounded-full bg-[linear-gradient(102.78deg,#6366F1_0%,#4F46E5_100%)] px-6 py-4 text-sm font-bold text-white shadow-[0_10px_15px_-3px_rgba(99,102,241,0.25)] transition hover:scale-[1.02] sm:w-auto md:px-10 md:py-5 md:text-lg">
                   Book a Growth Call Here!
                   <ArrowRight className="h-5 w-5" />
                 </button>
 
-                <div className="ml-2 flex items-center -space-x-3">
-                  <Image src={Client1} alt="User 1" className="h-10 w-10 rounded-full border-2 border-white object-cover" />
-                  <Image src={Client2} alt="User 2" className="h-10 w-10 rounded-full border-2 border-white object-cover" />
-                  <Image src={Client3} alt="User 3" className="h-10 w-10 rounded-full border-2 border-white object-cover" />
-                  <Image src={Client4} alt="User 4" className="h-10 w-10 rounded-full border-2 border-white object-cover" />
-                  <Image src={Clinet5} alt="User 5" className="h-10 w-10 rounded-full border-2 border-white object-cover" />
+                <div className="flex items-center -space-x-3 sm:ml-2">
+                  <Image src={Client1} alt="User 1" className="h-10 w-10 rounded-full border-2 border-white object-cover md:h-12 md:w-12" />
+                  <Image src={Client2} alt="User 2" className="h-10 w-10 rounded-full border-2 border-white object-cover md:h-12 md:w-12" />
+                  <Image src={Client3} alt="User 3" className="h-10 w-10 rounded-full border-2 border-white object-cover md:h-12 md:w-12" />
+                  <Image src={Client4} alt="User 4" className="h-10 w-10 rounded-full border-2 border-white object-cover md:h-12 md:w-12" />
+                  <Image src={Clinet5} alt="User 5" className="h-10 w-10 rounded-full border-2 border-white object-cover md:h-12 md:w-12" />
                 </div>
               </div>
             </div>
@@ -246,22 +248,22 @@ export default function HomePage() {
       </section>
 
       {/* CASE STUDIES MARQUEE */}
-      <section className="border-y border-[#E2E8F0] bg-white py-5 md:py-7">
+      <section className="border-y border-[#E2E8F0] bg-white py-4 md:py-7">
         <div className="mx-auto flex max-w-[1440px] flex-col items-center gap-4 px-4 md:px-8 lg:flex-row lg:gap-10 lg:px-20">
           <span className="shrink-0 text-xs font-extrabold uppercase tracking-[1.4px] text-[#64748B] sm:text-sm lg:text-xs">
             Real Case Studies:
           </span>
           <div className="relative w-full overflow-hidden">
-            <div className="animate-marquee flex items-center gap-12 whitespace-nowrap md:gap-16">
+            <div className="animate-marquee flex items-center gap-8 whitespace-nowrap md:gap-16">
               {[...caseStudiesData, ...caseStudiesData, ...caseStudiesData].map((study, i) => (
                 <div key={i} className="flex shrink-0 items-center gap-3 sm:gap-4">
-                  <div className="relative h-7 w-auto max-w-[110px] sm:h-8">
+                  <div className="relative h-6 w-auto max-w-[90px] sm:h-8 sm:max-w-[110px]">
                     <Image src={study.logo} alt={`${study.alt} logo`} className="h-full w-auto object-contain" />
                   </div>
                   <span className="font-Montserrat text-sm font-bold tracking-tight text-[#0F172A] sm:text-base md:text-lg">
                     {study.roas}
                   </span>
-                  <div className="ml-4 flex h-4 w-4 shrink-0 items-center justify-center sm:ml-6">
+                  <div className="ml-3 flex h-3 w-3 shrink-0 items-center justify-center sm:ml-6 sm:h-4 sm:w-4">
                     <Image src={Star} alt="Star Divider" className="h-full w-full object-contain" />
                   </div>
                 </div>
@@ -271,32 +273,32 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SECTION 1: WHAT WE ACTUALLY DO (From Screenshot 1) */}
-      <section className="bg-white px-5 py-16 md:py-24">
+      {/* SECTION 1: WHAT WE ACTUALLY DO */}
+      <section className="bg-white px-5 py-12 md:py-24">
         <div className="mx-auto max-w-[1280px]">
-          <div className="mb-10 max-w-[600px]">
+          <div className="mb-8 max-w-[600px] md:mb-10">
             <p className="text-[11px] font-bold uppercase tracking-[1.5px] text-[#6366F1] md:text-xs">
               WHAT WE ACTUALLY DO
             </p>
-            <h2 className="font-Montserrat mt-4 text-4xl font-extrabold leading-tight text-[#0F172A] md:text-5xl lg:text-[56px]">
+            <h2 className="font-Montserrat mt-4 text-3xl font-extrabold leading-tight text-[#0F172A] sm:text-4xl md:text-5xl lg:text-[56px]">
               Not just ads.
               <br />
               A system that
               <br />
               <span className="text-[#EA580C]">compounds.</span>
             </h2>
-            <p className="font-opensans mt-5 text-base leading-relaxed text-[#475569] md:text-lg">
+            <p className="font-opensans mt-4 text-sm leading-relaxed text-[#475569] sm:text-base md:mt-5 md:text-lg">
               Most agencies run campaigns. We build the full growth engine — from creative testing to funnel to scale.
             </p>
           </div>
 
           {/* Interactive Filter Tabs */}
-          <div className="mb-10 flex flex-wrap gap-3">
+          <div className="mb-8 flex flex-wrap gap-2 md:mb-10 md:gap-3">
             {tabs.map((tab) => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
-                className={`font-opensans rounded-full px-5 py-2 text-sm font-semibold transition-all ${
+                className={`font-opensans rounded-full px-4 py-2 text-xs font-semibold transition-all md:px-5 md:text-sm ${
                   activeTab === tab
                     ? "bg-[#6366F1] text-white shadow-md"
                     : "border border-[#E2E8F0] bg-white text-[#475569] hover:border-[#CBD5E1] hover:bg-slate-50"
@@ -308,22 +310,21 @@ export default function HomePage() {
           </div>
 
           {/* Selectable Services Grid */}
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
             {filteredServices.map((service) => {
               const isActive = activeServiceCard === service.id;
               return (
                 <div
                   key={service.id}
                   onClick={() => setActiveServiceCard(service.id)}
-                  className={`relative cursor-pointer overflow-hidden rounded-[20px] p-6 transition-all duration-300 md:p-8 ${
+                  className={`relative cursor-pointer overflow-hidden rounded-[20px] p-5 transition-all duration-300 md:p-8 ${
                     isActive
                       ? "bg-[#0B0C1E] text-white shadow-2xl scale-[1.02]"
                       : "border border-[#F1F5F9] bg-white text-[#0F172A] hover:border-[#E2E8F0] hover:shadow-lg hover:-translate-y-1"
                   }`}
                 >
-                  {/* Background Watermark Number */}
                   <span
-                    className={`absolute right-4 top-4 font-Montserrat text-[64px] font-black leading-none tracking-tighter ${
+                    className={`absolute right-4 top-4 font-Montserrat text-5xl font-black leading-none tracking-tighter md:text-[64px] ${
                       isActive ? "text-white/[0.04]" : "text-[#0F172A]/[0.03]"
                     }`}
                   >
@@ -331,23 +332,23 @@ export default function HomePage() {
                   </span>
 
                   <div
-                    className={`mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl ${
+                    className={`mb-5 inline-flex h-10 w-10 items-center justify-center rounded-xl md:mb-6 md:h-12 md:w-12 ${
                       isActive ? "bg-white/10 text-white" : "bg-[#F8FAFC] text-[#6366F1]"
                     }`}
                   >
                     {service.icon}
                   </div>
                   
-                  <h3 className={`font-Montserrat mb-3 text-xl font-bold ${isActive ? "text-white" : "text-[#0F172A]"}`}>
+                  <h3 className={`font-Montserrat mb-2 text-lg font-bold md:mb-3 md:text-xl ${isActive ? "text-white" : "text-[#0F172A]"}`}>
                     {service.title}
                   </h3>
                   
-                  <p className={`font-opensans mb-8 text-sm leading-relaxed ${isActive ? "text-white/70" : "text-[#64748B]"}`}>
+                  <p className={`font-opensans mb-6 text-xs leading-relaxed md:mb-8 md:text-sm ${isActive ? "text-white/70" : "text-[#64748B]"}`}>
                     {service.desc}
                   </p>
 
                   <div
-                    className={`mt-auto inline-flex items-center rounded-full px-4 py-2 text-xs font-semibold ${
+                    className={`mt-auto inline-flex items-center rounded-full px-3 py-1.5 text-[11px] font-semibold md:px-4 md:py-2 md:text-xs ${
                       isActive ? "bg-[#ffffff15] text-white" : "bg-[#F1F5F9] text-[#6366F1]"
                     }`}
                   >
@@ -360,27 +361,26 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SECTION 2: HOW WE HELP YOU GROW / A3 SYSTEM (From Screenshot 3) */}
-      <section className="bg-white px-5 py-16 md:py-24">
+      {/* SECTION 2: HOW WE HELP YOU GROW */}
+      <section className="bg-white px-5 py-12 md:py-24">
         <div className="mx-auto max-w-[1280px]">
           <div className="text-center md:text-left">
             <p className="text-[11px] font-bold uppercase tracking-[1.5px] text-[#6366F1] md:text-xs">
               HOW WE HELP YOU GROW
             </p>
-            <h2 className="font-Montserrat mt-4 text-3xl font-extrabold leading-tight text-[#0F172A] md:text-5xl lg:text-[56px]">
+            <h2 className="font-Montserrat mt-4 text-3xl font-extrabold leading-tight text-[#0F172A] sm:text-4xl md:text-5xl lg:text-[56px]">
               The A3 system that<br className="hidden md:block"/> <span className="text-[#EA580C]">compounds.</span>
             </h2>
-            <p className="font-opensans mt-4 text-base text-[#475569] md:text-lg">
+            <p className="font-opensans mt-4 text-sm text-[#475569] md:text-base lg:text-lg">
               Test everything → keep what wins → scale relentlessly. Three phases, one flywheel.
             </p>
           </div>
 
-          <div className="mt-12 flex flex-col items-center gap-6 lg:flex-row lg:items-stretch lg:justify-between lg:gap-4">
+          <div className="mt-10 flex flex-col items-center gap-5 md:mt-12 lg:flex-row lg:items-stretch lg:justify-between lg:gap-4">
             {a3Phases.map((phase, index) => {
               const isActive = activePhase === phase.id;
               return (
                 <React.Fragment key={phase.id}>
-                  {/* Selectable Phase Card */}
                   <div
                     onClick={() => setActivePhase(phase.id)}
                     className={`relative w-full cursor-pointer rounded-[24px] border p-6 transition-all duration-300 md:p-8 lg:w-1/3 ${
@@ -389,30 +389,28 @@ export default function HomePage() {
                         : "border-[#F1F5F9] bg-[#FAFAFA] hover:border-[#E2E8F0] hover:bg-white hover:shadow-md"
                     }`}
                   >
-                    {/* Watermark */}
-                    <span className="absolute right-6 top-6 font-Montserrat text-[64px] font-black leading-none tracking-tighter text-[#0F172A]/[0.03]">
+                    <span className="absolute right-6 top-6 font-Montserrat text-5xl font-black leading-none tracking-tighter text-[#0F172A]/[0.03] md:text-[64px]">
                       {phase.id}
                     </span>
 
-                    <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-white shadow-sm border border-[#F1F5F9]">
+                    <div className="mb-5 inline-flex h-10 w-10 items-center justify-center rounded-xl border border-[#F1F5F9] bg-white shadow-sm md:mb-6 md:h-12 md:w-12">
                       {phase.icon}
                     </div>
 
-                    <p className="font-Montserrat text-xs font-bold uppercase tracking-widest text-[#6366F1]">
+                    <p className="font-Montserrat text-[11px] font-bold uppercase tracking-widest text-[#6366F1] md:text-xs">
                       {phase.phase}
                     </p>
-                    <h3 className="font-Montserrat mb-3 mt-1 text-2xl font-black text-[#0F172A]">
+                    <h3 className="font-Montserrat mb-2 mt-1 text-xl font-black text-[#0F172A] md:mb-3 md:text-2xl">
                       {phase.title}
                     </h3>
-                    <p className="font-opensans mb-8 text-sm leading-relaxed text-[#475569]">
+                    <p className="font-opensans mb-6 text-xs leading-relaxed text-[#475569] md:mb-8 md:text-sm">
                       {phase.desc}
                     </p>
-                    <div className="inline-flex rounded-full bg-[#FFF7ED] px-4 py-2 text-xs font-semibold text-[#EA580C] border border-[#FFEDD5]">
+                    <div className="inline-flex rounded-full border border-[#FFEDD5] bg-[#FFF7ED] px-3 py-1.5 text-[11px] font-semibold text-[#EA580C] md:px-4 md:py-2 md:text-xs">
                       {phase.badge}
                     </div>
                   </div>
 
-                  {/* Arrow between cards (Desktop only) */}
                   {index < a3Phases.length - 1 && (
                     <div className="hidden shrink-0 items-center justify-center lg:flex">
                       <ArrowRight className="h-6 w-6 text-[#CBD5E1]" />
@@ -423,15 +421,15 @@ export default function HomePage() {
             })}
           </div>
 
-          <div className="mt-8 flex items-center justify-center gap-2 text-sm font-medium text-[#94A3B8]">
+          <div className="mt-6 flex items-center justify-center gap-2 text-xs font-medium text-[#94A3B8] md:mt-8 md:text-sm">
             <MousePointerClick className="h-4 w-4" />
             Click any phase to see exactly what we do
           </div>
         </div>
       </section>
 
-      {/* SECTION 3: WHAT YOU ACTUALLY GET (From Screenshot 2) */}
-      <section className="bg-white px-5 py-16 md:py-24">
+      {/* SECTION 3: WHAT YOU ACTUALLY GET */}
+      <section className="bg-white px-5 py-12 md:py-24">
         <div className="mx-auto max-w-[1280px]">
           
           {/* Top Row: Heading + Metrics */}
@@ -440,47 +438,47 @@ export default function HomePage() {
               <p className="text-[11px] font-bold uppercase tracking-[1.5px] text-[#6366F1] md:text-xs">
                 WHAT YOU ACTUALLY GET
               </p>
-              <h2 className="font-Montserrat mt-4 text-4xl font-extrabold leading-tight text-[#0F172A] md:text-5xl lg:text-[56px]">
+              <h2 className="font-Montserrat mt-4 text-3xl font-extrabold leading-tight text-[#0F172A] sm:text-4xl md:text-5xl lg:text-[56px]">
                 Results that
                 <br />
                 <span className="bg-gradient-to-r from-[#EA580C] to-[#F59E0B] bg-clip-text text-transparent">speak for themselves.</span>
               </h2>
-              <p className="font-opensans mt-5 text-base leading-relaxed text-[#475569] md:text-lg">
+              <p className="font-opensans mt-4 text-sm leading-relaxed text-[#475569] md:mt-5 md:text-base lg:text-lg">
                 Not vanity metrics. Not "brand awareness." Every outcome below is something we've delivered for real D2C brands — and can deliver for yours.
               </p>
             </div>
 
             {/* Metrics block */}
-            <div className="grid grid-cols-2 gap-4 lg:w-[500px]">
-              <div className="rounded-xl bg-[#FAFAFA] p-5">
-                <h4 className="font-Montserrat text-3xl font-black text-[#6366F1]">4.68x</h4>
-                <p className="font-opensans mt-1 text-xs text-[#64748B]">Peak ROAS delivered — Retroverse, 90 days</p>
+            <div className="grid w-full grid-cols-2 gap-3 sm:gap-4 lg:w-[500px]">
+              <div className="rounded-xl bg-[#FAFAFA] p-4 sm:p-5">
+                <h4 className="font-Montserrat text-2xl font-black text-[#6366F1] sm:text-3xl">4.68x</h4>
+                <p className="font-opensans mt-1 text-[11px] text-[#64748B] sm:text-xs">Peak ROAS delivered — Retroverse, 90 days</p>
               </div>
-              <div className="rounded-xl bg-[#FAFAFA] p-5">
-                <h4 className="font-Montserrat text-3xl font-black text-[#6366F1]">50+</h4>
-                <p className="font-opensans mt-1 text-xs text-[#64748B]">D2C brands scaled across fashion, gaming & wellness</p>
+              <div className="rounded-xl bg-[#FAFAFA] p-4 sm:p-5">
+                <h4 className="font-Montserrat text-2xl font-black text-[#6366F1] sm:text-3xl">50+</h4>
+                <p className="font-opensans mt-1 text-[11px] text-[#64748B] sm:text-xs">D2C brands scaled across fashion, gaming & wellness</p>
               </div>
-              <div className="rounded-xl bg-[#FAFAFA] p-5">
-                <h4 className="font-Montserrat text-3xl font-black text-[#6366F1]">35%</h4>
-                <p className="font-opensans mt-1 text-xs text-[#64748B]">Avg. CVR improvement after funnel audit</p>
+              <div className="rounded-xl bg-[#FAFAFA] p-4 sm:p-5">
+                <h4 className="font-Montserrat text-2xl font-black text-[#6366F1] sm:text-3xl">35%</h4>
+                <p className="font-opensans mt-1 text-[11px] text-[#64748B] sm:text-xs">Avg. CVR improvement after funnel audit</p>
               </div>
-              <div className="rounded-xl bg-[#FAFAFA] p-5">
-                <h4 className="font-Montserrat text-3xl font-black text-[#6366F1]">90</h4>
-                <p className="font-opensans mt-1 text-xs text-[#64748B]">Days to meaningful ROAS shift — our benchmark</p>
+              <div className="rounded-xl bg-[#FAFAFA] p-4 sm:p-5">
+                <h4 className="font-Montserrat text-2xl font-black text-[#6366F1] sm:text-3xl">90</h4>
+                <p className="font-opensans mt-1 text-[11px] text-[#64748B] sm:text-xs">Days to meaningful ROAS shift — our benchmark</p>
               </div>
             </div>
           </div>
 
           {/* Results Grid */}
-          <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-12 grid gap-5 sm:grid-cols-2 md:mt-16 lg:grid-cols-3 lg:gap-6">
             {resultsCards.map((card) => (
-              <div key={card.id} className="flex flex-col rounded-[20px] border border-[#F1F5F9] bg-white p-6 shadow-sm transition hover:border-[#E2E8F0] hover:shadow-lg md:p-8">
-                <div className="mb-5 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-slate-50 border border-slate-100">
+              <div key={card.id} className="flex flex-col rounded-[20px] border border-[#F1F5F9] bg-white p-5 shadow-sm transition hover:border-[#E2E8F0] hover:shadow-lg md:p-8">
+                <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-100 bg-slate-50 md:mb-5">
                   {card.icon}
                 </div>
-                <h3 className="font-Montserrat mb-3 text-xl font-bold text-[#0F172A]">{card.title}</h3>
-                <p className="font-opensans mb-8 text-sm leading-relaxed text-[#475569]">{card.desc}</p>
-                <div className="mt-auto inline-flex self-start rounded-full bg-[#F1F5F9] px-3 py-1.5 text-xs font-semibold text-[#6366F1]">
+                <h3 className="font-Montserrat mb-2 text-lg font-bold text-[#0F172A] md:mb-3 md:text-xl">{card.title}</h3>
+                <p className="font-opensans mb-6 text-xs leading-relaxed text-[#475569] md:mb-8 md:text-sm">{card.desc}</p>
+                <div className="mt-auto inline-flex self-start rounded-full bg-[#F1F5F9] px-3 py-1.5 text-[11px] font-semibold text-[#6366F1] md:text-xs">
                   {card.badge}
                 </div>
               </div>
@@ -488,50 +486,51 @@ export default function HomePage() {
           </div>
 
           {/* Dark CTA Banner */}
-          <div className="mt-16 flex flex-col items-center justify-between gap-8 rounded-[24px] bg-[#0B0C1E] px-8 py-10 md:flex-row md:px-12 md:py-14">
-            <div className="max-w-[500px] text-left">
-              <h3 className="font-Montserrat text-3xl font-extrabold leading-tight text-white md:text-4xl">
+          <div className="mt-12 flex flex-col items-center justify-between gap-6 rounded-[20px] bg-[#0B0C1E] px-6 py-8 md:mt-16 md:flex-row md:gap-8 md:rounded-[24px] md:px-12 md:py-14">
+            <div className="w-full max-w-[500px] text-left">
+              <h3 className="font-Montserrat text-2xl font-extrabold leading-tight text-white md:text-3xl lg:text-4xl">
                 Ready to see if this works for your brand?
               </h3>
-              <p className="font-opensans mt-4 text-sm text-[#94A3B8] md:text-base">
+              <p className="font-opensans mt-3 text-xs text-[#94A3B8] md:mt-4 md:text-sm lg:text-base">
                 We'll audit your current funnel and ad account — no pitch, no fluff. Just an honest look at what's working and what isn't.
               </p>
-              <div className="mt-6 space-y-3">
+              <div className="mt-5 space-y-2 md:mt-6 md:space-y-3">
                 {["Free funnel & ad account audit", "30-minute strategy call, no obligation", "Custom ROAS projection for your brand"].map((item, i) => (
-                  <div key={i} className="flex items-center gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-[#10B981]" />
-                    <span className="font-opensans text-sm text-white md:text-base">{item}</span>
+                  <div key={i} className="flex items-center gap-2 md:gap-3">
+                    <CheckCircle2 className="h-4 w-4 text-[#10B981] md:h-5 md:w-5" />
+                    <span className="font-opensans text-[13px] text-white md:text-sm lg:text-base">{item}</span>
                   </div>
                 ))}
               </div>
             </div>
             
             <div className="flex w-full flex-col items-center md:w-auto md:items-end">
-              <button className="flex w-full items-center justify-center gap-2 rounded-lg bg-[#818CF8] px-8 py-4 font-Montserrat text-base font-bold text-white transition hover:bg-[#6366F1] md:w-auto">
-                Book a Funnel Review <ArrowRight className="h-5 w-5" />
+              {/* FIXED: Button scaling for mobile */}
+              <button className="flex w-full items-center justify-center gap-2 rounded-lg bg-[#818CF8] px-6 py-4 font-Montserrat text-sm font-bold text-white transition hover:bg-[#6366F1] md:w-auto md:px-8 md:text-base">
+                Book a Funnel Review <ArrowRight className="h-4 w-4 md:h-5 md:w-5" />
               </button>
-              <p className="font-opensans mt-3 text-xs text-[#64748B]">Usually responded to within 24 hours</p>
+              <p className="font-opensans mt-3 text-center text-[11px] text-[#64748B] md:text-right md:text-xs">Usually responded to within 24 hours</p>
             </div>
           </div>
 
         </div>
       </section>
 
-      {/* TESTIMONIALS (Preserved) */}
-      <section className="bg-white py-16 md:py-16">
-        <div className="mx-auto max-w-[1280px] px-5 lg:px-8">
+      {/* TESTIMONIALS */}
+      <section className="bg-white px-5 py-12 md:py-16">
+        <div className="mx-auto max-w-[1280px]">
           <div className="text-center">
-            <p className="text-xs font-bold uppercase tracking-[1.5px] text-[#6366F1] md:text-sm">
+            <p className="text-[11px] font-bold uppercase tracking-[1.5px] text-[#6366F1] md:text-xs lg:text-sm">
               Client&apos;s Testimonials
             </p>
-            <h2 className="font-Montserrat mt-3 text-3xl font-bold text-[#0F172A] md:mt-4 md:text-4xl">
+            <h2 className="font-Montserrat mt-2 text-2xl font-bold text-[#0F172A] sm:text-3xl md:mt-4 md:text-4xl">
               Our Clients Speak Volume!
             </h2>
           </div>
 
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 md:mt-16 lg:grid-cols-3 lg:gap-8">
+          <div className="mt-8 grid gap-5 sm:grid-cols-2 md:mt-12 md:gap-6 lg:mt-16 lg:grid-cols-3 lg:gap-8">
             {testimonials.map((item) => (
-              <div key={item.role} className="group relative overflow-hidden rounded-2xl">
+              <div key={item.role} className="group relative overflow-hidden rounded-[16px] md:rounded-2xl">
                 <Image src={item.image} alt={item.role} className="h-full w-full object-cover" />
                 <div className="absolute inset-0 flex items-center justify-center"></div>
               </div>

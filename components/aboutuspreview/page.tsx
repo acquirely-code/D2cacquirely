@@ -27,7 +27,7 @@ import kunalImage from "@/app/assests/kunalmondal.png";
 import mausamImage from "@/app/assests/mausamarora.png";
 import flywheelImage from "@/app/assests/flywheelmodel.png";
 
-import Navbar from "@/components/Navbar";
+import Navbar from "../Navbar";
 import Footer from "@/components/Footer";
 
 import { Montserrat, Open_Sans } from "next/font/google";
@@ -118,7 +118,7 @@ export default function AboutPage() {
   return (
     <main className="overflow-hidden bg-white text-[#111827]">
       {/* HERO SECTION (Merged Dark Theme with HTML Messaging) */}
-   <section className="relative overflow-hidden bg-white pb-16 pt-6 sm:pb-24 sm:pt-10">
+   <section className="relative overflow-hidden bg-white pb-16 pt-24 md:pb-[160px] md:pt-[96px]">
         {/* Background Blur Effects (Lowered opacity for light mode) */}
         <div className="absolute right-[-5%] top-[-10%] z-0 h-[600px] w-[600px] rounded-full bg-blue-600/5 blur-[60px]"></div>
         <div className="absolute bottom-[-10%] left-[-5%] z-0 h-[600px] w-[600px] rounded-full bg-purple-500/5 blur-[50px]"></div>

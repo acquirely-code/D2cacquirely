@@ -30,13 +30,13 @@ export default function Hero() {
               Accepting 2 new D2C brands this month - North America
             </div>
 
-            <h1 className="mt-5 font-Montserrat text-[32px] font-bold leading-[1.2] text-white sm:mt-6 sm:text-[40px] sm:leading-[1.3] lg:text-[48px] lg:leading-[48px] lg:tracking-[-0.5px]">
-              <span className="block">Scale Your Brand from</span>
-              <span className="bg-[linear-gradient(90deg,#818CF8_0%,#C084FC_25%,#F97316_80%)] bg-clip-text text-transparent">
-                $10K to $100K+ Monthly on Meta
-              </span>
-              <span className="block lg:inline"> - Profitably</span>
-            </h1>
+         <h1 className="mt-5 font-Montserrat text-[28px] font-bold leading-[1.2] text-white sm:mt-6 sm:text-[40px] sm:leading-[1.3] lg:text-[48px] lg:leading-[48px] lg:tracking-[-0.5px]">
+  <span className="block">Scale Your Brand from</span>
+  <span className="bg-[linear-gradient(90deg,#818CF8_0%,#C084FC_25%,#F97316_80%)] bg-clip-text text-transparent">
+    $10K to $100K+ Monthly on Meta
+  </span>
+  <span className=" lg:inline"> - Profitably</span>
+</h1>
           </div>
 
           {/* CUSTOM DATA WIDGET REPLACING IMAGE */}

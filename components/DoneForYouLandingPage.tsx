@@ -177,9 +177,11 @@ const caseStudies = [
 ];
 
 
-const fitItems = [
+const fitItems: ReactNode[] = [
   "You have a real sales process and someone following up on leads",
-  "You're ready to spend seriously on ads — not just test the waters (real estate teams, mortgage brokers, med spas, professional services, home services)",
+  <>
+    You're ready to spend seriously on ads — not just test the waters (<strong>real estate teams, mortgage brokers, med spas, professional services, home services</strong>)
+  </>,
   "You've run ads before and know the problem isn't the platform",
   "You want predictable pipeline, not a one-month spike"
 ];
@@ -975,7 +977,7 @@ export default function DoneForYouLandingPage() {
               <div className="rounded-t-2xl bg-[#10B981] px-6 py-5 text-sm font-semibold text-white sm:px-9 sm:py-6 sm:text-base">THIS IS FOR YOU</div>
               <div className="space-y-5 px-5 py-5 sm:space-y-6 sm:px-8 sm:py-6">
                 {fitItems.map((item, index) => (
-                  <div key={item}>
+                  <div key={index}>
                     <div className="flex items-start gap-3">
                       <CheckBullet />
                       <span className="font-['Open_Sans'] text-sm text-[#1F2937] sm:text-base">{item}</span>
@@ -990,7 +992,7 @@ export default function DoneForYouLandingPage() {
               <div className="rounded-t-2xl bg-[#EF4444] px-6 py-5 text-sm font-semibold text-white sm:px-9 sm:py-6 sm:text-base">NOT FOR YOU</div>
               <div className="space-y-5 px-5 py-5 sm:space-y-6 sm:px-8 sm:py-6">
                 {notFitItems.map((item, index) => (
-                  <div key={item}>
+                  <div key={index}>
                     <div className="flex items-start gap-3">
                       <DotBullet />
                       <span className="font-['Open_Sans'] text-sm text-[#64748B] sm:text-base">{item}</span>
