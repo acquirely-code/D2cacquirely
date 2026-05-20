@@ -11,8 +11,8 @@ import Client3 from "@/app/assests/founder3.png";
 import Client4 from "@/app/assests/founder4.png";
 
 const heroHighlights = [
-  "We do not just run Meta Ads campaigns. We build performance marketing systems.",
-  "We build performance marketing systems that find winning creatives, scale them profitably, and protect your ROAS - even as Meta's algorithm keeps changing.",
+  "We build the growth engine. You scale.",
+  "Most D2C brands run ads, watch ROAS fluctuate, and blame the algorithm. We build the A3 Flywheel — a structured test-scale-optimise system that compounds performance every month.",
 ];
 
 export default function Hero() {
@@ -31,11 +31,11 @@ export default function Hero() {
             </div>
 
          <h1 className="mt-5 font-Montserrat text-[28px] font-bold leading-[1.2] text-white sm:mt-6 sm:text-[40px] sm:leading-[1.3] lg:text-[48px] lg:leading-[48px] lg:tracking-[-0.5px]">
-  <span className="block">Scale Your Brand from</span>
+  <span className="block">Your Ads Aren't</span>
   <span className="bg-[linear-gradient(90deg,#818CF8_0%,#C084FC_25%,#F97316_80%)] bg-clip-text text-transparent">
-    $10K to $100K+ Monthly on Meta
+    the Problem.
   </span>
-  <span className=" lg:inline"> - Profitably</span>
+  <span className=" lg:inline"> Your System Is.</span>
 </h1>
           </div>
 

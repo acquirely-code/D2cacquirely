@@ -5,7 +5,7 @@ const growthFeatures = [
   "A3 Flywheel — structured test → scale system",
   "Meta campaign management (FB + Instagram)",
   "Weekly creative variations + UGC editing",
-  "Lead quality monitoring & CPQL optimisation",
+  "ROAS, CPP, CPM Optimisation",
   "Bi-weekly performance reports"
 ];
 
@@ -131,7 +131,7 @@ export default function PricingSection() {
               If we don't improve your lead economics — we work free.
             </h4>
             <p className="mt-2 text-[14px] leading-[24px] text-[#4C5A72] md:text-[15px]">
-              After the 90-day stabilisation period, if there's no clear improvement in cost per qualified lead or lead volume at consistent CPQL, we work the next month at <span className="font-bold text-black">zero management fee</span> — or you exit with a full learning handover and zero lock-in.
+              After the 90-day stabilisation period, if there’s no clear improvement in ROAS or revenue at consistent CAC, we work the next month at <span className="font-bold text-black">zero management fee</span> — or you exit with a full campaign handover and zero lock-in.
             </p>
             
             <div className="mt-5 flex flex-wrap items-center gap-3">
