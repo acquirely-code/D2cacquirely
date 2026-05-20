@@ -1,5 +1,5 @@
-import AgencyLandingPage from "@/components/AgencyLandingPage";
+import FrontomePage from "@/components/homepreview/page";
 
 export default function HomePage() {
-  return <AgencyLandingPage />;
+  return <FrontomePage />;
 }

@@ -1,36 +1,29 @@
-const pricingTiers = [
-  {
-    tier: "Tier 1",
-    range: "$2,000 - $30,000/mo ad spend",
-    fee: "CAD $3,000/month + applicable tax",
-    cardClass: "bg-[#F4F7FF]",
-  },
-  {
-    tier: "Tier 2",
-    range: "$30,000+/mo ad spend",
-    fee: "10% of total monthly ad spend",
-    cardClass: "bg-[#F0FFF5]",
-  },
+import React from 'react';
+import { Check, Shield, ArrowRight } from 'lucide-react';
+
+const growthFeatures = [
+  "A3 Flywheel — structured test → scale system",
+  "Meta campaign management (FB + Instagram)",
+  "Weekly creative variations + UGC editing",
+  "Lead quality monitoring & CPQL optimisation",
+  "Bi-weekly performance reports"
 ];
 
-const inHouseRoles = [
-  { role: "Meta Performance Marketer", cost: "$6,500" },
-  { role: "Creative Strategist", cost: "$5,000" },
-  { role: "Video Editor", cost: "$3,500" },
-  { role: "Graphic Designer", cost: "$3,500" },
-];
-
-const additionalFeatures = [
-  "A proven scaling\nframework",
-  "A structured creative\ntesting system",
-  "Performance optimisation\nworkflows",
+const scaleFeatures = [
+  "Aggressive A3 scaling cadence (weekly)",
+  "Multi-region campaign architecture",
+  "Micro-analysis: day, hour & region redistribution",
+  "Dedicated Slack channel — founder-direct access",
+  "Monthly growth strategy session"
 ];
 
 export default function PricingSection() {
   return (
     <section className="bg-white px-4 py-8 font-sans md:py-16 lg:py-24">
-      <div className="mx-auto max-w-[866px]">
-        <div className="mb-8 text-center md:mb-12">
+      <div className="mx-auto max-w-[1080px]">
+        
+        {/* Header Section */}
+        <div className="mb-12 text-center md:mb-16">
           <div className="inline-flex h-[30px] items-center gap-2 rounded-[4px] border border-[#CFD5FD] bg-[#EDEFFF] px-3 md:h-[34px]">
             <span className="h-2 w-2 rounded-full bg-[#5332E2]" />
             <span className="text-[10px] font-semibold uppercase tracking-[1.2px] text-[#5332E2] md:text-[12px]">
@@ -38,98 +31,123 @@ export default function PricingSection() {
             </span>
           </div>
 
-          <h2 className="mt-4 font-Montserrat text-[28px] font-bold leading-tight tracking-tight md:mt-6 md:text-[36px] lg:text-[40px]">
-            <span className="bg-[linear-gradient(90deg,#818CF8_0%,#F97316_100%)] bg-clip-text text-transparent">
-              Transparent, Performance-
-            </span>
-            <br className="block sm:hidden" />
-            <span className="text-black">Aligned Pricing</span>
+          <h2 className="mt-4 font-Montserrat text-[32px] font-bold leading-tight tracking-tight text-black md:mt-6 md:text-[44px] lg:text-[52px]">
+            Simple, <span className="bg-[linear-gradient(90deg,#818CF8_0%,#F97316_100%)] bg-clip-text text-transparent">Outcome-Based</span> Pricing
           </h2>
 
-          <p className="mx-auto mt-3 max-w-[663px] font-opensans text-[15px] leading-[24px] text-[#7B8BA0] md:mt-4 md:text-[18px] md:leading-[28px]">
-            Both plans include the full A3 Flywheel system. The difference is how fast you want to move and how much direct support you need.
-          </p>
-
-          <div className="mx-auto mt-5 max-w-[720px] rounded-[14px] border border-[#CFD5FD] bg-[#F5F7FF] px-4 py-3 font-opensans text-[14px] leading-6 text-[#4C5A72] md:text-[15px]">
-            All prices in Canadian Dollars (CAD). USD pricing available on request.
-          </div>
-        </div>
-
-        <div className="mb-10 grid gap-4 sm:grid-cols-2 md:mb-12 md:gap-6">
-          {pricingTiers.map((tier) => (
-            <div
-              key={tier.tier}
-              className={`rounded-[16px] border border-black/5 px-5 py-8 text-center shadow-[0_12px_30px_rgba(15,23,42,0.04)] md:px-6 md:py-10 ${tier.cardClass}`}
-            >
-              <p className="text-[12px] font-bold uppercase tracking-[1.6px] text-[#6366F1]">{tier.tier}</p>
-              <p className="mt-4 text-[16px] font-semibold text-[#374151] md:text-[18px]">{tier.range}</p>
-              <p className="mt-3 text-[28px] font-bold leading-tight text-black md:text-[34px]">{tier.fee}</p>
-            </div>
-          ))}
-        </div>
-
-        <div className="rounded-[23px] border border-[#E5E5E5] bg-white p-5 shadow-[0_0_4px_rgba(0,0,0,0.05)] md:p-8 lg:p-12">
-          <h3 className="mb-6 text-[22px] font-semibold text-black md:mb-8 md:text-[28px] lg:text-[32px]">
-            Compare That to Hiring In-House
-          </h3>
-
-          <div className="space-y-2 md:space-y-3">
-            <div className="flex justify-between px-2 pb-2 text-[11px] font-medium uppercase tracking-[1.5px] text-[#ACACC3] md:px-4 md:text-[14px] md:tracking-[2px]">
-              <span>Role</span>
-              <span>Monthly Cost (CAD)</span>
-            </div>
-
-            {inHouseRoles.map((item) => (
-              <div
-                key={item.role}
-                className="flex items-center justify-between rounded-[6px] bg-[#FAFAFA] px-3 py-3 md:px-5 md:py-4"
-              >
-                <span className="text-[14px] text-black md:text-[18px] lg:text-[20px]">{item.role}</span>
-                <span className="font-Montserrat text-[14px] font-medium text-black md:text-[18px] lg:text-[20px]">
-                  {item.cost}
-                </span>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-6 flex flex-col justify-between rounded-[6px] bg-[#FFF4F4] px-4 py-5 sm:flex-row sm:items-center md:mt-8 md:px-6 md:py-8">
-            <span className="mb-2 text-[18px] font-bold text-[#B91C1C] sm:mb-0 md:text-[24px] lg:text-[28px]">
-              Total In-House Cost
-            </span>
-            <div className="text-left sm:text-right">
-              <span className="mb-1 block text-[28px] font-bold leading-[1] text-[#B91C1C] md:text-[36px] lg:text-[40px]">
-                $18,500+
-              </span>
-              <span className="block text-[14px] text-[#B91C1C] md:text-[16px] lg:text-[18px]">/mo</span>
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-12 text-center md:mt-16">
-          <h4 className="mb-8 text-[18px] font-bold text-black md:mb-10 md:text-[22px] lg:text-[24px]">
-            And that still doesn&apos;t include:
-          </h4>
-
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-3 sm:gap-4 md:gap-8">
-            {additionalFeatures.map((feature) => (
-              <div key={feature} className="flex flex-col items-center">
-                <div className="mb-3 flex h-[40px] w-[40px] items-center justify-center rounded-[6px] bg-[#FBDEDE] md:mb-5 md:h-[45px] md:w-[46px]">
-                  <p className="text-[20px] font-bold text-[#F87171]">X</p>
-                </div>
-                <p className="whitespace-pre-line text-[15px] leading-[22px] text-black md:text-[18px] md:leading-[28px] lg:text-[20px]">
-                  {feature}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="mt-12 rounded-r-[8px] border-l-[4px] border-[#2D4CFF] bg-[#F4F7FF] px-5 py-5 md:mt-16 md:px-8 md:py-7">
-          <h5 className="mb-1 text-[16px] font-bold text-black md:text-[18px] lg:text-[20px]">The real risk?</h5>
-          <p className="text-[14px] text-black md:text-[15px] lg:text-[16px]">
-            Continuing with an agency that spends budget but never learns from the data.
+          <p className="mx-auto mt-4 max-w-[600px] font-opensans text-[15px] leading-[24px] text-[#7B8BA0] md:text-[16px]">
+            Month-to-month after your 90-day onboarding. No lock-ins.
           </p>
         </div>
+
+        {/* Pricing Cards */}
+        <div className="grid gap-6 md:grid-cols-2 lg:gap-8">
+          
+          {/* GROWTH CARD */}
+          <div className="flex flex-col rounded-[16px] border border-[#CFD5FD] bg-[#F4F7FF] p-6 shadow-sm md:p-8 lg:p-10">
+            <div className="mb-8 border-b border-[#CFD5FD]/50 pb-8">
+              <h3 className="text-[13px] font-bold uppercase tracking-[1.5px] text-[#5332E2]">Growth</h3>
+              <p className="mt-2 text-[14px] text-[#7B8BA0]">For ad spend <span className="font-semibold text-[#4C5A72]">$5,000 – $30,000/mo</span></p>
+              
+              <div className="mt-6 flex items-baseline gap-2">
+                <span className="text-[40px] font-bold leading-none text-black md:text-[48px]">$2,500</span>
+                <span className="text-[15px] font-medium text-[#7B8BA0]">USD / month</span>
+              </div>
+              <p className="mt-2 text-[12px] text-[#7B8BA0]">≈ $3,000 CAD • Tax additional</p>
+            </div>
+
+            <div className="mb-10 flex-grow">
+              <p className="mb-5 text-[11px] font-bold uppercase tracking-[1.5px] text-[#7B8BA0]">What's Included</p>
+              <ul className="space-y-4">
+                {growthFeatures.map((feature, i) => (
+                  <li key={i} className="flex items-start gap-3 text-[14px] leading-snug text-[#4C5A72] md:text-[15px]">
+                    <div className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#10B981]/10">
+                      <Check className="h-3 w-3 text-[#10B981]" strokeWidth={3} />
+                    </div>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <button className="flex w-full items-center justify-center gap-2 rounded-[8px] border border-[#5332E2] bg-transparent py-4 text-[15px] font-semibold text-[#5332E2] transition-colors hover:bg-[#5332E2]/5">
+              Book a Funnel Audit <ArrowRight className="h-4 w-4" />
+            </button>
+          </div>
+
+          {/* SCALE CARD */}
+          <div className="relative flex flex-col rounded-[16px] border-2 border-[#5332E2] bg-[#F0FFF5] p-6 shadow-[0_12px_30px_rgba(83,50,226,0.12)] md:p-8 lg:p-10">
+            <div className="absolute -top-4 right-6 rounded-full bg-[#5332E2] px-4 py-1.5 text-[11px] font-bold uppercase tracking-wider text-white md:right-10">
+              Most Popular
+            </div>
+            
+            <div className="mb-8 border-b border-[#CFD5FD]/50 pb-8">
+              <h3 className="text-[13px] font-bold uppercase tracking-[1.5px] text-[#5332E2]">Scale</h3>
+              <p className="mt-2 text-[14px] text-[#7B8BA0]">For ad spend <span className="font-semibold text-[#4C5A72]">$30,000+/mo</span></p>
+              
+              <div className="mt-6 flex items-baseline gap-2">
+                <span className="text-[40px] font-bold leading-none text-black md:text-[48px]">10%</span>
+                <span className="text-[15px] font-medium text-[#7B8BA0]">of monthly ad spend</span>
+              </div>
+              <p className="mt-2 text-[12px] text-[#7B8BA0]">Billed in USD • CAD available on request</p>
+            </div>
+
+            <div className="mb-10 flex-grow">
+              <p className="mb-5 text-[11px] font-bold uppercase tracking-[1.5px] text-[#7B8BA0]">Everything In Growth, Plus</p>
+              <ul className="space-y-4">
+                {scaleFeatures.map((feature, i) => (
+                  <li key={i} className="flex items-start gap-3 text-[14px] leading-snug text-[#4C5A72] md:text-[15px]">
+                    <div className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#10B981]/20">
+                      <Check className="h-3 w-3 text-[#059669]" strokeWidth={3} />
+                    </div>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <button className="flex w-full items-center justify-center gap-2 rounded-[8px] bg-[#5332E2] py-4 text-[15px] font-semibold text-white transition-colors hover:bg-[#4326C2]">
+              Book a Funnel Audit <ArrowRight className="h-4 w-4" />
+            </button>
+          </div>
+        </div>
+
+        {/* Small Footer Text */}
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-2 text-center text-[13px] text-[#7B8BA0] md:gap-4">
+          <span>Month-to-month after 90-day onboarding</span>
+          <span className="hidden h-1 w-1 rounded-full bg-[#CFD5FD] sm:block"></span>
+          <span>No setup fees</span>
+          <span className="hidden h-1 w-1 rounded-full bg-[#CFD5FD] sm:block"></span>
+          <span>Full data handover if you exit</span>
+        </div>
+
+        {/* The Guarantee Box */}
+        <div className="mt-12 rounded-[16px] border border-[#CFD5FD] bg-[#FAFBFF] p-6 shadow-sm md:mt-16 md:flex md:items-start md:gap-6 md:p-8">
+          <div className="mb-4 flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#EDEFFF] text-[#5332E2] md:mb-0">
+            <Shield className="h-6 w-6" />
+          </div>
+          <div>
+            <h4 className="font-Montserrat text-[18px] font-bold text-black md:text-[20px]">
+              If we don't improve your lead economics — we work free.
+            </h4>
+            <p className="mt-2 text-[14px] leading-[24px] text-[#4C5A72] md:text-[15px]">
+              After the 90-day stabilisation period, if there's no clear improvement in cost per qualified lead or lead volume at consistent CPQL, we work the next month at <span className="font-bold text-black">zero management fee</span> — or you exit with a full learning handover and zero lock-in.
+            </p>
+            
+            <div className="mt-5 flex flex-wrap items-center gap-3">
+              <div className="inline-flex items-center gap-1.5 rounded-full border border-[#10B981]/30 bg-[#10B981]/5 px-3 py-1.5 text-[12px] font-semibold text-[#059669]">
+                <Check className="h-3 w-3" /> No lock-in contracts
+              </div>
+              <div className="inline-flex items-center gap-1.5 rounded-full border border-[#10B981]/30 bg-[#10B981]/5 px-3 py-1.5 text-[12px] font-semibold text-[#059669]">
+                <Check className="h-3 w-3" /> Full data ownership
+              </div>
+              <div className="inline-flex items-center gap-1.5 rounded-full border border-[#10B981]/30 bg-[#10B981]/5 px-3 py-1.5 text-[12px] font-semibold text-[#059669]">
+                <Check className="h-3 w-3" /> 90-day risk reversal
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
   );
