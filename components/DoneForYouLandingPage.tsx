@@ -20,6 +20,7 @@ import {
 
   FlaskConical,
   Trophy,
+   X,
 } from "lucide-react";
 
 
@@ -491,8 +492,60 @@ function FaqAccordion() {
   );
 }
 
+interface PhaseDetailCard {
+  label: string;
+  title: string;
+  desc: string;
+}
+
+interface PhaseDetail {
+  title: string;
+  sub: string;
+  cards: PhaseDetailCard[];
+}
+
+const phaseDetails: Record<number, PhaseDetail> = {
+  1: {
+    title: "Phase 1 — Test campaign structure",
+    sub: "Campaign 1 is our structured testing ground. Multiple creative packs, one mission: find your winners.",
+    cards: [
+      { label: "Campaign structure", title: "Broad audience targeting", desc: "We start wide — no interest stacking. Let Meta find who converts first." },
+      { label: "Creative packs", title: "3–4 packs, 3–5 ads each", desc: "Each pack tests a different angle — UGC, static, motion. 15+ ads minimum per month." },
+      { label: "Budget logic", title: "$5k–$30k/day test budget", desc: "Enough data to reach statistical significance in 7–10 days per creative." },
+      { label: "Decision rule", title: "CPA + ROAS threshold", desc: "Any creative hitting our ROAS floor and CPM target moves to Phase 2." },
+    ],
+  },
+  2: {
+    title: "Phase 2 — Winners campaign structure",
+    sub: "Proven creatives get their own campaign with controlled budgets. No more competing with fresh tests.",
+    cards: [
+      { label: "Campaign structure", title: "Isolated winner campaigns", desc: "Each proven creative runs in its own ad set — no cannibalisation from testing." },
+      { label: "Audience layer", title: "Interest stacking begins", desc: "Winners get interest-stacked audiences added progressively to expand reach." },
+      { label: "Budget logic", title: "Budget follows performance", desc: "We increase spend 20–30% every 3 days if ROAS holds. No random hikes." },
+      { label: "Creative refresh", title: "Iteration on winners", desc: "Top performers get 2–3 angle variations tested alongside to extend their life." },
+    ],
+  },
+  3: {
+    title: "Phase 3 — Scale campaign structure",
+    sub: "Maximum budget on maximum proof. Broad + interest stacked + lookalikes — all feeding from the same winner pool.",
+    cards: [
+      { label: "Campaign structure", title: "Aggressive scaling mode", desc: "Scale campaigns run CBO with proven creatives only. No experiments here." },
+      { label: "Audience layer", title: "Lookalike + broad + interest", desc: "Three audience types running simultaneously — we find the cheapest converts." },
+      { label: "Budget logic", title: "$300+/day when ready", desc: "Scale triggers only when ROAS is predictable across 14+ days of data." },
+      { label: "Loop back", title: "Phase 1 keeps running", desc: "Testing never stops. New creatives constantly refresh the winner pool below." },
+    ],
+  },
+};
+
 export default function DoneForYouLandingPage() {
-    const [activePhase, setActivePhase] = useState(2); // Default to middle card
+     const [activePhase, setActivePhase] = useState<number | null>(2); 
+
+    const handlePhaseToggle = (id: number) => {
+    setActivePhase(activePhase === id ? null : id);
+  };
+
+   // Default to middle card
+  const activePhaseData = activePhase ? phaseDetails[activePhase] : null;
 
   return (
     <main className="bg-white text-[#1F2937]">
@@ -729,58 +782,57 @@ export default function DoneForYouLandingPage() {
         </div>
       </section>
 
-      <section className="bg-white px-5 py-16 md:py-24">
+  {/* SECTION 2: HOW WE HELP YOU GROW */}
+      <section className="bg-white px-4 py-12 sm:px-5 md:py-8">
         <div className="mx-auto max-w-[1280px]">
           <div className="text-center md:text-left">
             <p className="text-[11px] font-bold uppercase tracking-[1.5px] text-[#6366F1] md:text-xs">
               HOW WE HELP YOU GROW
             </p>
-            <h2 className="font-Montserrat mt-4 text-3xl font-extrabold leading-tight text-[#0F172A] md:text-5xl lg:text-[56px]">
-              The A3 system that<br className="hidden md:block"/> <span className="text-[#EA580C]">compounds.</span>
+            <h2 className="font-Montserrat mt-4 text-3xl font-extrabold leading-tight text-[#0F172A] sm:text-4xl md:text-5xl lg:text-[56px]">
+              The A3 system that<br className="hidden md:block" /> <span className="text-[#EA580C]">compounds.</span>
             </h2>
-            <p className="font-opensans mt-4 text-base text-[#475569] md:text-lg">
+            <p className="font-opensans mt-4 text-sm text-[#475569] md:text-base lg:text-lg">
               Test everything → keep what wins → scale relentlessly. Three phases, one flywheel.
             </p>
           </div>
 
-          <div className="mt-12 flex flex-col items-center gap-6 lg:flex-row lg:items-stretch lg:justify-between lg:gap-4">
+          {/* Phase Cards */}
+          <div className="mt-10 flex flex-col items-center gap-5 md:mt-12 lg:flex-row lg:items-stretch lg:justify-between lg:gap-4">
             {a3Phases.map((phase, index) => {
               const isActive = activePhase === phase.id;
               return (
                 <React.Fragment key={phase.id}>
-                  {/* Selectable Phase Card */}
                   <div
-                    onClick={() => setActivePhase(phase.id)}
-                    className={`relative w-full cursor-pointer rounded-[24px] border p-6 transition-all duration-300 md:p-8 lg:w-1/3 ${
-                      isActive 
-                        ? "border-[#E2E8F0] bg-white shadow-xl scale-[1.02]" 
+                    onClick={() => handlePhaseToggle(phase.id)}
+                    className={`relative w-full cursor-pointer rounded-[24px] border p-5 transition-all duration-300 sm:p-6 md:p-8 lg:w-1/3 ${
+                      isActive
+                        ? "scale-[1.02] border-[#E2E8F0] bg-white shadow-xl ring-2 ring-[#6366F1]/20"
                         : "border-[#F1F5F9] bg-[#FAFAFA] hover:border-[#E2E8F0] hover:bg-white hover:shadow-md"
                     }`}
                   >
-                    {/* Watermark */}
-                    <span className="absolute right-6 top-6 font-Montserrat text-[64px] font-black leading-none tracking-tighter text-[#0F172A]/[0.03]">
+                    <span className="absolute right-4 top-4 font-Montserrat text-4xl font-black leading-none tracking-tighter text-[#0F172A]/[0.03] sm:right-6 sm:top-6 sm:text-5xl md:text-[64px]">
                       {phase.id}
                     </span>
 
-                    <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-white shadow-sm border border-[#F1F5F9]">
+                    <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-xl border border-[#F1F5F9] bg-white shadow-sm sm:mb-5 md:mb-6 md:h-12 md:w-12">
                       {phase.icon}
                     </div>
 
-                    <p className="font-Montserrat text-xs font-bold uppercase tracking-widest text-[#6366F1]">
+                    <p className="font-Montserrat text-[11px] font-bold uppercase tracking-widest text-[#6366F1] md:text-xs">
                       {phase.phase}
                     </p>
-                    <h3 className="font-Montserrat mb-3 mt-1 text-2xl font-black text-[#0F172A]">
+                    <h3 className="font-Montserrat mb-2 mt-1 text-lg font-black text-[#0F172A] sm:text-xl md:mb-3 md:text-2xl">
                       {phase.title}
                     </h3>
-                    <p className="font-opensans mb-8 text-sm leading-relaxed text-[#475569]">
+                    <p className="font-opensans mb-5 text-xs leading-relaxed text-[#475569] sm:mb-6 md:mb-8 md:text-sm">
                       {phase.desc}
                     </p>
-                    <div className="inline-flex rounded-full bg-[#FFF7ED] px-4 py-2 text-xs font-semibold text-[#EA580C] border border-[#FFEDD5]">
+                    <div className="inline-flex flex-wrap rounded-full border border-[#FFEDD5] bg-[#FFF7ED] px-3 py-1.5 text-[10px] font-semibold text-[#EA580C] sm:text-[11px] md:px-4 md:py-2 md:text-xs">
                       {phase.badge}
                     </div>
                   </div>
 
-                  {/* Arrow between cards (Desktop only) */}
                   {index < a3Phases.length - 1 && (
                     <div className="hidden shrink-0 items-center justify-center lg:flex">
                       <ArrowRight className="h-6 w-6 text-[#CBD5E1]" />
@@ -789,6 +841,54 @@ export default function DoneForYouLandingPage() {
                 </React.Fragment>
               );
             })}
+          </div>
+
+          {/* Expandable Details Panel */}
+          <div
+            className={`mt-8 overflow-hidden rounded-[24px] border border-[#E2E8F0] bg-[#FAFAFA] transition-all duration-500 ease-in-out ${
+              activePhase ? "max-h-[1200px] opacity-100" : "max-h-0 border-transparent opacity-0"
+            }`}
+          >
+            {activePhaseData && (
+              <div className="p-5 sm:p-6 md:p-8">
+                <div className="mb-6 flex items-start justify-between gap-4">
+                  <div>
+                    <h4 className="font-Montserrat text-base font-black text-[#0F172A] sm:text-lg md:text-xl">
+                      {activePhaseData.title}
+                    </h4>
+                    <p className="font-opensans mt-2 text-xs text-[#475569] sm:text-sm">
+                      {activePhaseData.sub}
+                    </p>
+                  </div>
+                  <button
+                    onClick={() => setActivePhase(null)}
+                    className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-[#E2E8F0] text-[#64748B] transition-colors hover:bg-white hover:text-[#0F172A]"
+                    aria-label="Close detail panel"
+                  >
+                    <X className="h-4 w-4" />
+                  </button>
+                </div>
+
+                <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+                  {activePhaseData.cards.map((card, idx) => (
+                    <div
+                      key={idx}
+                      className="rounded-xl border border-[#E2E8F0] bg-white p-4 sm:p-5"
+                    >
+                      <div className="mb-1 text-[10px] font-semibold uppercase tracking-wider text-[#94A3B8] sm:text-[11px]">
+                        {card.label}
+                      </div>
+                      <div className="mb-2 font-Montserrat text-xs font-bold text-[#0F172A] sm:text-sm">
+                        {card.title}
+                      </div>
+                      <div className="font-opensans text-xs leading-relaxed text-[#475569] sm:text-sm">
+                        {card.desc}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </section>
@@ -857,6 +957,7 @@ export default function DoneForYouLandingPage() {
                 <span className="text-[48px] font-bold text-white">$2,500</span>
                 <span className="text-gray-400">USD / month</span>
               </div>
+               <p className="mt-2 text-[12px] text-[#7B8BA0]">≈ $3,000 CAD • Tax additional</p>
             </div>
 
             <div className="mb-10 flex-grow">
@@ -898,17 +999,18 @@ export default function DoneForYouLandingPage() {
                 <span className="text-[48px] font-bold text-white">10%</span>
                 <span className="text-gray-400">of monthly ad spend</span>
               </div>
+               <p className="mt-2 text-[12px] text-[#7B8BA0]">Billed in USD • CAD available on request</p>
             </div>
 
             <div className="mb-10 flex-grow">
               <p className="mb-6 text-[12px] font-bold uppercase tracking-wider text-gray-500">Everything in Growth, Plus:</p>
               <ul className="space-y-4">
                 {[
-                  "Aggressive A3 scaling cadence (Weekly)",
-                  "Multi-region campaign architecture",
-                  "Micro-analysis: Day, hour & region redistribution",
-                  "Dedicated Slack channel - founder direct access",
-                  "Monthly growth strategy session"
+                  "Weekly creative refresh + scaling decisions based on CPQL thresholds",
+                  "Multi-funnel structure: cold, warm & retargeting audiences managed separately",
+                  "⁠Micro-analysis: day, hours & region redistribution",
+                  "Dedicated Whatsapp group - real time communication",
+                  "Monthly review + next 30-day growth plan"
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3 text-[15px] text-gray-300">
                     <Check className="mt-1 h-4 w-4 shrink-0 text-[#818CF8]" />

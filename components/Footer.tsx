@@ -62,15 +62,15 @@ export default function Footer() {
           <div className="mt-4 space-y-5 text-base text-[#64748B] md:mt-5">
             <div className="flex items-center gap-3">
               <Phone className="h-5 w-5 text-[#0052FF]" />
-              <p>+91 90875 63210</p>
+              <p>++1 236 877 9035 </p>
             </div>
             <div className="flex items-center gap-3">
               <Globe className="h-5 w-5 text-[#0052FF]" />
-              <p>www.acquirely.in</p>
+              <p>https://acquirely.ca/</p>
             </div>
             <div className="flex items-center gap-3">
               <MapPin className="h-5 w-5 text-[#0052FF]" />
-              <p>New Delhi, India</p>
+              <p>Vancouver, Canada</p>
             </div>
           </div>
         </div>

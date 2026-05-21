@@ -10,11 +10,11 @@ const growthFeatures = [
 ];
 
 const scaleFeatures = [
-  "Weekly creative refresh + scaling decisions based on ROAS thresholds",
+  "Weekly creative refresh + scaling decisions based on CPQL thresholds",
   "Multi-funnel structure: cold, warm & retargeting audiences managed separately",
   "Micro-analysis: day, hour & region redistribution",
   "Dedicated Whatsapp group - real time communication",
-  "Monthly CAC/LTV review + next 30-day growth plan"
+  "Monthly review + next 30-day growth plan"
 ];
 
 export default function PricingSection() {
