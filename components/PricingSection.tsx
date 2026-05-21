@@ -1,5 +1,5 @@
 import React from 'react';
-import { Check, Shield, ArrowRight } from 'lucide-react';
+import { Check, Shield, ArrowRight, Link } from 'lucide-react';
 
 const growthFeatures = [
   "A3 Flywheel — structured test → scale system",
@@ -70,9 +70,12 @@ export default function PricingSection() {
               </ul>
             </div>
 
+              <Link href="https://booknow.acquirely.in/#/FRCNA">  
+
             <button className="flex w-full items-center justify-center gap-2 rounded-[8px] border border-[#5332E2] bg-transparent py-4 text-[15px] font-semibold text-[#5332E2] transition-colors hover:bg-[#5332E2]/5">
               Book a Funnel Audit <ArrowRight className="h-4 w-4" />
             </button>
+            </Link>
           </div>
 
           {/* SCALE CARD */}
@@ -105,10 +108,11 @@ export default function PricingSection() {
                 ))}
               </ul>
             </div>
-
+<Link href="https://booknow.acquirely.in/#/FRCNA">
             <button className="flex w-full items-center justify-center gap-2 rounded-[8px] bg-[#5332E2] py-4 text-[15px] font-semibold text-white transition-colors hover:bg-[#4326C2]">
               Book a Funnel Audit <ArrowRight className="h-4 w-4" />
             </button>
+</Link>
           </div>
         </div>
 

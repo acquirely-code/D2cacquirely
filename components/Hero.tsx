@@ -146,7 +146,7 @@ export default function Hero() {
             </div>
 
             <Link
-              href="https://forms.acquirely.in/acquirely/form/FunnelReviewCallECom/formperma/muJYVHXbKDbQ7N3xEPr_lrjkOuBMe33JPNULGFJm9Kg"
+              href="https://booknow.acquirely.in/#/FRCNA"
               className="mt-8 inline-flex min-h-[52px] w-full items-center justify-center gap-2 rounded-[14px] bg-[linear-gradient(102.78deg,#6366F1_0%,#4F46E5_100%)] px-5 text-center font-opensans text-[15px] font-bold leading-6 text-white transition hover:brightness-110 sm:min-h-[56px] sm:max-w-[351px] sm:text-[18px]"
             >
               Book Your Free Growth Audit

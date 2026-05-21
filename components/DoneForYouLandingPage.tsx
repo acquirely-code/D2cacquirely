@@ -657,7 +657,7 @@ export default function DoneForYouLandingPage() {
         Most businesses run ads and get form fills that go nowhere. We build the system that turns ad spend into qualified pipeline — predictably, at scale.
         </p>
         
-        <Link href="https://forms.acquirely.in/acquirely/form/LeadGenFunnelReviewCall/formperma/DEijNOw1e1C4Wd8r6luSZlNxj1zQVtObr106aUYe4-0">
+        <Link href="https://booknow.acquirely.in/#/FRCNA">
           <button
             type="button"
             className="mt-7 inline-flex rounded-xl bg-[linear-gradient(102.78deg,#6366F1_0%,#4F46E5_100%)] px-5 py-3.5 text-center text-sm font-bold text-white shadow-[0_20px_25px_-5px_rgba(43,127,255,0.25),0_8px_10px_-6px_rgba(43,127,255,0.25)] sm:mt-8 sm:px-8 sm:py-4 sm:text-base lg:text-lg"
@@ -977,10 +977,12 @@ export default function DoneForYouLandingPage() {
                 ))}
               </ul>
             </div>
+<Link href="https://booknow.acquirely.in/#/FRCNA">
 
             <button className="flex w-full items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 py-4 font-bold text-white transition-all hover:bg-white/10">
               Book a Funnel Audit <ArrowRight className="h-4 w-4" />
             </button>
+</Link>
           </div>
 
           {/* Scale Plan */}
@@ -1019,10 +1021,11 @@ export default function DoneForYouLandingPage() {
                 ))}
               </ul>
             </div>
-
+<Link href="https://booknow.acquirely.in/#/FRCNA">
             <button className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#5332E2] py-4 font-bold text-white transition-all hover:bg-[#6344ef]">
               Book a Funnel Audit <ArrowRight className="h-4 w-4" />
             </button>
+</Link>
           </div>
         </div>
 
@@ -1156,7 +1159,7 @@ export default function DoneForYouLandingPage() {
               <br className="hidden sm:block" />
               Let's fix it.
             </p>
-            <Link href="https://forms.acquirely.in/acquirely/form/LeadGenFunnelReviewCall/formperma/DEijNOw1e1C4Wd8r6luSZlNxj1zQVtObr106aUYe4-0">
+            <Link href="https://booknow.acquirely.in/#/FRCNA">
             
             <button
               type="button"
