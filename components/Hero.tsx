@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Check, Star, ArrowDown, ArrowUp, Shield } from "lucide-react";
+import { ArrowRight, Check, Star, ArrowDown, ArrowUp, Shield, Pointer } from "lucide-react";
 
 import logo from "@/app/assests/logo.png";
 import Client1 from "@/app/assests/founder1.png";
@@ -133,8 +133,41 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="order-3 mt-8 flex max-w-[598px] flex-col lg:col-start-1 lg:row-start-2 lg:mt-0">
+
+           <div className="order-3 lg:col-start-1 lg:row-start-2">
+        <h2 className="mt-2 font-['Open_Sans'] text-xl font-semibold text-white sm:m-0 sm:text-2xl">We build the growth engine. You scale.</h2>
+        <p className="mt-2 max-w-[530px] font-['Open_Sans'] text-[15px] leading-6 text-white sm:text-base sm:leading-7 lg:text-lg lg:leading-[29px]">
+        Most D2C brands run ads, watch ROAS fluctuate, and blame the algorithm. We build the A3 Flywheel — a structured test-scale-optimise system that compounds performance every month.
+        </p>
+        
+        <Link href="https://booknow.acquirely.in/#/FRCNA">
+          <button
+            type="button"
+            className="mt-7 inline-flex rounded-xl bg-[linear-gradient(102.78deg,#6366F1_0%,#4F46E5_100%)] px-5 py-3.5 text-center text-sm font-bold text-white shadow-[0_20px_25px_-5px_rgba(43,127,255,0.25),0_8px_10px_-6px_rgba(43,127,255,0.25)] sm:mt-8 sm:px-8 sm:py-4 sm:text-base lg:text-lg"
+          >
+             <span className="rotate-90"><Pointer/></span><span className="pl-2">Get Leads Your Sales Team Will Love</span>
+          </button>
+        </Link>
+        
+        <div className="mt-7 flex flex-col gap-2.5 font-['Open_Sans'] text-xs text-[#99A1AF] sm:mt-8 sm:flex-row sm:flex-wrap sm:gap-6 sm:text-sm">
+          <div className="flex items-center gap-2">
+            <Check className="h-4 w-4 text-[#2B7FFF]" strokeWidth={2.5} />
+            <span>$3.6mn+ Ad Spend Managed</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Check className="h-4 w-4 text-[#2B7FFF]" strokeWidth={2.5} />
+            <span>9+ Regions Active</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Check className="h-4 w-4 text-[#2B7FFF]" strokeWidth={2.5} />
+            <span>75-Day Risk Reversal</span>
+          </div>
+        </div>
+      </div>
+
+          {/* <div className="order-3 mt-8 flex max-w-[598px] flex-col lg:col-start-1 lg:row-start-2 lg:mt-0">
             <div className="space-y-4 sm:space-y-3">
+              <p>We build the growth engine. You scale.</p>
               {heroHighlights.map((highlight) => (
                 <div key={highlight} className="flex gap-3 sm:gap-2">
                   <Check className="mt-1 h-5 w-5 shrink-0 text-[#818CF8] sm:mt-2" />
@@ -153,36 +186,21 @@ export default function Hero() {
               <ArrowRight className="h-4 w-4" />
             </Link>
 
-            <div className="mt-8 md:ml-2 ml-6 flex flex-col gap-4 sm:mt-6 sm:flex-row sm:items-center sm:gap-5 sm:px-3">
-              <div className="flex items-center">
-                {[Client1, Client2, Client3, Client4].map((client, index) => (
-                  <Image
-                    key={index}
-                    src={client}
-                    alt={`Client ${index + 1}`}
-                    className="-ml-3 h-10 w-10 rounded-full border border-[#3730A3] transition-transform duration-300 hover:scale-110 sm:-ml-3 sm:h-12 sm:w-12"
-                  />
-                ))}
-                <div className="relative -ml-3 grid h-10 w-10 place-items-center rounded-full border-2 border-[#3730A3] bg-[linear-gradient(135deg,#6366F1_0%,#4F46E5_100%)] text-[11px] font-bold text-white sm:text-[12px]">
-                  +84
-                </div>
-              </div>
-
-              <div>
-                <div className="flex items-center gap-2">
-                  <div className="flex items-center gap-0.5 text-[#FFA227]">
-                    {Array.from({ length: 5 }).map((_, index) => (
-                      <Star key={index} className="h-4 w-4 fill-current stroke-0" />
-                    ))}
-                  </div>
-                  <span className="text-[14px] font-semibold text-white">4.9/5</span>
-                </div>
-                <p className="mt-1 font-opensans text-[11px] uppercase tracking-[1.4px] text-white/65 sm:text-[13px]">
-                  Brands across NA, India &amp; SEA
-                </p>
-              </div>
-            </div>
-          </div>
+                 <div className="mt-7 flex flex-col gap-2.5 font-['Open_Sans'] text-xs text-[#99A1AF] sm:mt-8 sm:flex-row sm:flex-wrap sm:gap-6 sm:text-sm">
+                      <div className="flex items-center gap-2">
+                        <Check className="h-4 w-4 text-[#2B7FFF]" strokeWidth={2.5} />
+                        <span>$3.6mn+ Ad Spend Managed</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Check className="h-4 w-4 text-[#2B7FFF]" strokeWidth={2.5} />
+                        <span>9+ Regions Active</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Check className="h-4 w-4 text-[#2B7FFF]" strokeWidth={2.5} />
+                        <span>75-Day Risk Reversal</span>
+                      </div>
+                    </div>
+          </div> */}
         </div>
       </div>
     </section>
