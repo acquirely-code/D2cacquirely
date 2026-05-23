@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Navbar from "../Navbar"; // Adjust path if needed
 import Footer from "@/components/Footer";
 import Image, { StaticImageData } from "next/image";
+import Link from "next/link"
 
 // Icons
 import {
@@ -309,10 +310,12 @@ export default function HomePage() {
               </p>
 
               <div className="mt-8 flex w-full flex-col items-center gap-5 sm:w-auto sm:flex-row md:mt-10 md:gap-4">
+                 <Link href="https://booknow.acquirely.in/#/FRCNA">
                 <button className="inline-flex w-full items-center justify-center gap-3 rounded-full bg-[linear-gradient(102.78deg,#6366F1_0%,#4F46E5_100%)] px-6 py-4 text-sm font-bold text-white shadow-[0_10px_15px_-3px_rgba(99,102,241,0.25)] transition hover:scale-[1.02] sm:w-auto md:px-10 md:py-5 md:text-lg">
                   Book a Growth Call Here!
                   <ArrowRight className="h-5 w-5" />
                 </button>
+                </Link>
 
                 <div className="flex items-center -space-x-3 sm:ml-2">
                   <Image src={Client1} alt="User 1" className="h-10 w-10 rounded-full border-2 border-white object-cover md:h-12 md:w-12" />
@@ -642,9 +645,11 @@ export default function HomePage() {
             </div>
 
             <div className="flex w-full flex-col items-center md:w-auto md:items-end">
+               <Link href="https://booknow.acquirely.in/#/FRCNA">
               <button className="flex w-full items-center justify-center gap-2 rounded-lg bg-[#818CF8] px-5 py-4 font-Montserrat text-sm font-bold text-white transition hover:bg-[#6366F1] sm:px-6 md:w-auto md:px-8 md:text-base">
                 Book a Funnel Review <ArrowRight className="h-4 w-4 shrink-0 md:h-5 md:w-5" />
               </button>
+              </Link>
               <p className="font-opensans mt-3 text-center text-[10px] text-[#64748B] sm:text-[11px] md:text-right md:text-xs">
                 Usually responded to within 24 hours
               </p>
