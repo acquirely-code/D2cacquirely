@@ -26,13 +26,13 @@ export default function Footer() {
           
           {/* Social Icons */}
           <div className="mt-6 flex gap-4">
-            <a href="#" className="flex h-10 w-10 items-center justify-center rounded-full bg-[#F8FAFC] text-[#0F172A] transition hover:bg-[#E2E8F0]">
+            <a href="https://www.instagram.com/acquirely.in" className="flex h-10 w-10 items-center justify-center rounded-full bg-[#F8FAFC] text-[#0F172A] transition hover:bg-[#E2E8F0]">
               <Instagram className="h-4 w-4" />
             </a>
-            <a href="#" className="flex h-10 w-10 items-center justify-center rounded-full bg-[#F8FAFC] text-[#0F172A] transition hover:bg-[#E2E8F0]">
+            <a href="https://www.linkedin.com/company/acquirelydm/" className="flex h-10 w-10 items-center justify-center rounded-full bg-[#F8FAFC] text-[#0F172A] transition hover:bg-[#E2E8F0]">
               <Linkedin className="h-4 w-4" />
             </a>
-            <a href="#" className="flex h-10 w-10 items-center justify-center rounded-full bg-[#F8FAFC] text-[#0F172A] transition hover:bg-[#E2E8F0]">
+            <a href="https://www.linkedin.com/company/acquirelydm/" className="flex h-10 w-10 items-center justify-center rounded-full bg-[#F8FAFC] text-[#0F172A] transition hover:bg-[#E2E8F0]">
               <Facebook className="h-4 w-4" />
             </a>
           </div>

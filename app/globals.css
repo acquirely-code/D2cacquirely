@@ -107,3 +107,19 @@
   font-weight: 400;
   font-style: normal;
 }
+
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  width: max-content;
+  animation: marquee 22s linear infinite;
+}
