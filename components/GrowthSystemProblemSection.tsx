@@ -84,7 +84,7 @@ export default function GrowthSystemProblemSection() {
               <p className="mt-1 text-[14px] leading-6 text-[#666666] sm:text-[15px] sm:leading-5">
                 With updates like Andromeda, Meta's AI now prioritises creative signals
                 over targeting signals. Interest stacking is weaker. Budget scaling often
-                breaks performance. Yet most brands kept tweaking audiences while ignoring
+                breaks performance. Yet, most brands kept tweaking audiences while ignoring
                 the real shift: creative-driven performance marketing.
               </p>
             </div>

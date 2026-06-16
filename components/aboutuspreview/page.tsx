@@ -114,7 +114,7 @@ const differentiators = [
   },
 ];
 
-export default function AboutPage() {
+export default function   AboutPage() {
   return (
     <main className="overflow-hidden bg-white text-[#111827]">
       {/* HERO SECTION (Merged Dark Theme with HTML Messaging) */}
@@ -162,41 +162,11 @@ export default function AboutPage() {
               
               <div className="rounded-2xl border border-[#F1F5F9] bg-[#F8FAFC] px-4 py-6 text-center shadow-sm transition hover:border-[#E2E8F0] hover:shadow-md sm:col-span-1">
                 <div className="font-Montserrat text-3xl font-extrabold text-[#0F172A] md:text-4xl">
-                  <span className="text-[#6366F1]">4.68</span>x
+                  <span className="text-[#6366F1]">5</span>x
                 </div>
                 <div className="mt-2 font-opensans text-sm text-[#64748B]">Peak ROAS delivered</div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ABOUT / COLLABORATION */}
-      <section className="bg-white py-16 sm:py-24">
-        <div className="mx-auto grid max-w-[1280px] items-center gap-10 px-4 sm:px-6 md:gap-16 lg:grid-cols-2 lg:px-0">
-          <div className="order-2 lg:order-1">
-            <SmallLabel>Who We Are</SmallLabel>
-
-            <h2 className="mt-4 font-Montserrat text-2xl font-extrabold leading-snug text-[#1A1A1A] sm:mt-6 sm:text-4xl lg:text-5xl lg:leading-tight">
-              Best Performance Marketing Company
-            </h2>
-
-            <div className="mt-5 space-y-4 font-opensans text-sm leading-6 text-[#64748B] sm:mt-8 sm:space-y-6 sm:text-base sm:leading-8 md:text-lg">
-              <p>
-                Since 2025, we have been helping premium brands achieve
-                profitable and scalable growth through structured performance
-                marketing services.
-              </p>
-
-              <p>
-                Our approach blends strategy, creative testing, data, and smart
-                scaling to deliver results that last.
-              </p>
-            </div>
-          </div>
-
-          <div className="order-1 lg:order-2">
-            <Image src={Collabration} alt="Collabration" className="w-full rounded-2xl object-cover shadow-lg" />
           </div>
         </div>
       </section>
@@ -210,30 +180,42 @@ export default function AboutPage() {
               <h2 className="mt-4 font-Montserrat text-2xl font-extrabold leading-tight text-[#0F172A] sm:mt-5 sm:text-4xl md:text-[40px]">
                 We&apos;ve Been on the <span className="text-[#4F46E5]">Client Side.</span> We Know How It Feels.
               </h2>
-              <div className="mt-6 space-y-4 font-opensans text-sm leading-[1.75] text-[#64748B] sm:mt-8 sm:space-y-5 sm:text-base md:text-[17px]">
+              <div className="mt-6 space-y-4 font-Montserrat text-sm leading-[1.75] text-[#64748B] sm:mt-8 sm:space-y-5 sm:text-base md:text-[17px]">
                 <p>
-                  When we were scaling Propel&apos;s Immersion conference and running marketing for UMG, we did what any founder does — we went looking for a performance marketing agency to trust with our budget.
+                  Across years of building EdTech ventures Propel Education and Uncover Math Genius we did what any founder does: we went looking for a performance marketing agency to trust with our budget.
                 </p>
                 <p>
-                  What we found was frustrating. Agencies that couldn&apos;t explain their own strategies. Account managers who weren&apos;t confident in their own recommendations. Promises of results with zero accountability when they didn&apos;t come.
+                 What we found was frustrating. Agencies that couldn't explain their own strategies. Account managers who weren't confident in their own recommendations. Promises of results with zero accountability when they didn't come.
+
+
                 </p>
                 <p>
-                  Nobody was willing to take real ownership. So we stopped looking and started building — an agency run by people who&apos;ve sat in the client&apos;s chair and know exactly what it feels like when the money&apos;s on the line.
+                  Nobody was willing to take real ownership. So we stopped looking and started building an agency run by people who've sat in the client's chair and know exactly what it feels like when the money's on the line.
                 </p>
               </div>
             </div>
             
-            <div className="rounded-[24px] bg-[#0F172A] p-8 shadow-2xl sm:p-12">
-              <span className="mb-4 block font-serif text-[60px] leading-[0.6] text-[#818CF8]">
-                &quot;
-              </span>
-              <div className="font-Montserrat text-xl font-bold leading-relaxed text-white sm:text-2xl">
-                We couldn&apos;t find an agency we&apos;d trust with our own money. So we built one.
-              </div>
-              <div className="mt-8 font-opensans text-sm text-white/50">
-                <strong className="font-semibold text-white/90">Mausam Arora</strong> — Founder, Acquirely
-              </div>
-            </div>
+          <div className="rounded-[24px] bg-[#0F172A] p-8 shadow-2xl sm:p-12">
+  <span className="mb-4 block font-serif text-[60px] leading-[0.6] text-[#818CF8]">
+    &quot;
+  </span>
+  <div className="font-Montserrat text-xl font-bold leading-relaxed text-white sm:text-2xl">
+    We couldn&apos;t find an agency we&apos;d trust with our own money. So we built one.
+  </div>
+  
+  {/* Fixed Author Section */}
+  <div className="mt-8 flex items-center gap-4 font-opensans text-sm">
+    <Image 
+      src={mausamImage} 
+      alt="Mausam Arora" 
+      className="h-14 w-14 rounded-full object-cover" 
+    />
+    <div className="flex flex-col">
+      <span className="font-semibold text-white">Mausam Arora</span>
+      <span className="text-white/50">Founder, Acquirely</span>
+    </div>
+  </div>
+</div>
           </div>
         </div>
       </section>

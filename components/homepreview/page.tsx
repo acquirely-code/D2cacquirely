@@ -371,16 +371,16 @@ export default function HomePage() {
       {/* SECTION 1: WHAT WE ACTUALLY DO */}
       <section className="bg-white px-4 py-12 sm:px-5 md:py-24">
         <div className="mx-auto max-w-[1280px]">
-          <div className="mb-8 max-w-[600px] md:mb-10">
+          <div className="mb-8 max-w-[1200px] md:mb-10">
             <p className="text-[11px] font-bold uppercase tracking-[1.5px] text-[#6366F1] md:text-xs">
               WHAT WE ACTUALLY DO
             </p>
             <h2 className="font-Montserrat mt-4 text-3xl font-extrabold leading-tight text-[#0F172A] sm:text-4xl md:text-5xl lg:text-[56px]">
               Not just ads.
-              <br />
+             
               A system that
-              <br />
-              <span className="text-[#EA580C]">compounds.</span>
+         
+              <span className="text-[#EA580C]"> compounds.</span>
             </h2>
             <p className="font-opensans mt-4 text-sm leading-relaxed text-[#475569] sm:text-base md:mt-5 md:text-lg">
               Most agencies run campaigns. We build the full growth engine — from creative testing to funnel to scale.
@@ -464,7 +464,7 @@ export default function HomePage() {
               HOW WE HELP YOU GROW
             </p>
             <h2 className="font-Montserrat mt-4 text-3xl font-extrabold leading-tight text-[#0F172A] sm:text-4xl md:text-5xl lg:text-[56px]">
-              The A3 system that<br className="hidden md:block" /> <span className="text-[#EA580C]">compounds.</span>
+              The A3 system that <span className="text-[#EA580C]">compounds.</span>
             </h2>
             <p className="font-opensans mt-4 text-sm text-[#475569] md:text-base lg:text-lg">
               Test everything → keep what wins → scale relentlessly. Three phases, one flywheel.
@@ -591,7 +591,7 @@ export default function HomePage() {
             {/* Metrics block */}
             <div className="grid w-full grid-cols-2 gap-3 sm:gap-4 lg:w-[500px]">
               <div className="rounded-xl bg-[#FAFAFA] p-4 sm:p-5">
-                <h4 className="font-Montserrat text-2xl font-black text-[#6366F1] sm:text-3xl">4.68x</h4>
+                <h4 className="font-Montserrat text-2xl font-black text-[#6366F1] sm:text-3xl">5x</h4>
                 <p className="font-opensans mt-1 text-[10px] text-[#64748B] sm:text-[11px] md:text-xs">Peak ROAS delivered — Retroverse, 90 days</p>
               </div>
               <div className="rounded-xl bg-[#FAFAFA] p-4 sm:p-5">

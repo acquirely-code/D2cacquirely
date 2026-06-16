@@ -745,10 +745,10 @@ export default function DoneForYouLandingPage() {
       </section>
 
       <section className="bg-white">
-        <div className="mx-auto max-w-[1440px] px-2 py-10 sm:px-8 sm:py-12 lg:px-[272px] lg:py-16">
-          <div className="mx-auto max-w-[896px] px-2 text-center sm:px-6">
+        <div className="mx-auto max-w-[1740px] px-2 py-10 sm:px-8 sm:py-12 lg:px-[272px] lg:py-16">
+          <div className="max-w-[1696px] px-2 text-center sm:px-6">
             <SmallLabel>MARKET SHIFT</SmallLabel>
-            <h2 className="mt-10 text-[28px] font-extrabold leading-[1.15] text-transparent sm:mt-12 sm:text-[34px] sm:leading-[1.2] lg:text-[40px] lg:leading-[40px] bg-[linear-gradient(90deg,#818CF8_0%,#F97316_100%)] bg-clip-text">
+            <h2 className="mt-10 text-[28px] font-extrabold leading-[1.15] text-transparent sm:mt-12 sm:text-[34px] sm:leading-[1.2] lg:text-[50px] lg:leading-[52px] bg-[linear-gradient(90deg,#818CF8_0%,#F97316_100%)] bg-clip-text">
               Meta&apos;s Algorithm Made Lead Gen Harder.
               <br />
              <span className="text-black"> We Made It Smarter.</span>

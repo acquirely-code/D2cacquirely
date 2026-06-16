@@ -14,7 +14,7 @@ const benefitCards = [
   {
     title: "Data Compounds",
     description:
-      "Every creative test adds to your brand's intelligence library — winning hooks, audience signals, format insights. By Month 6, your campaigns aren't guessing. They're running on 6 months of compounded performance data your competitors don't have.",
+      "Every creative test adds to your brand's intelligence library winning hooks, audience signals, format insights. By Month 6, your campaigns aren't guessing. They're running on 6 months of compounded performance data your competitors don't have.",
     value: "10x",
     label: "Smarter by Month 6",
     icon: BarChart3,
@@ -24,7 +24,7 @@ const benefitCards = [
   {
     title: "Revenue Compounds",
     description:
-      "As the A3 system locks winning creatives and stabilises ROAS, scaling spend stops feeling like a gamble. Budgets increase with confidence because the system has already proven what works — revenue grows because efficiency grows first.",
+      "As the A3 system locks winning creatives and stabilises ROAS, scaling spend stops feeling like a gamble. Budgets increase with confidence because the system has already proven what works revenue grows because efficiency grows first.",
     value: "3x",
     label: "Average revenue growth in 90 days",
     icon: TrendingUp,
@@ -34,7 +34,7 @@ const benefitCards = [
   {
     title: "CAC Compounds Down",
     description:
-      "Every cycle eliminates underperforming creatives and reallocates budget to proven winners. Over time, you're spending less to acquire the same customer — not because of luck, but because the system gets tighter every month.",
+      "Every cycle eliminates underperforming creatives and reallocates budget to proven winners. Over time, you're spending less to acquire the same customer not because of luck, but because the system gets tighter every month.",
     value: "Consistent",
     label: "CAC improvement month over month",
     icon: null,
