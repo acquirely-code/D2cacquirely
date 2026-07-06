@@ -44,7 +44,7 @@ export default function Navbar() {
               onMouseLeave={() => setIsDesktopDropdownOpen(false)}
             >
               <button className="flex items-center gap-1 text-[20px] text-[#0F172A] transition hover:text-[#0052FF]">
-                DONE FOR YOU <ChevronDown className={`h-5 w-5 transition-transform ${isDesktopDropdownOpen ? "rotate-180" : ""}`} />
+                Services<ChevronDown className={`h-5 w-5 transition-transform ${isDesktopDropdownOpen ? "rotate-180" : ""}`} />
               </button>
               
               {/* Dropdown Menu Items - Using pt-4 to prevent hover gap issues */}
@@ -100,13 +100,13 @@ export default function Navbar() {
         <div className="absolute left-0 top-full mt-2 w-full rounded-[10px] border border-gray-200 bg-white/95 p-5 shadow-2xl backdrop-blur-xl lg:hidden">
           <div className="flex flex-col gap-6">
             
-            {/* Mobile DONE FOR YOU Dropdown */}
+            {/* Mobile Services Dropdown */}
             <div className="flex flex-col gap-3">
               <button 
                 className="flex items-center justify-between text-lg font-medium text-[#0F172A] transition hover:text-[#0052FF]"
                 onClick={() => setIsMobileDropdownOpen(!isMobileDropdownOpen)}
               >
-                DONE FOR YOU <ChevronDown className={`h-5 w-5 transition-transform ${isMobileDropdownOpen ? "rotate-180" : ""}`} />
+                Services <ChevronDown className={`h-5 w-5 transition-transform ${isMobileDropdownOpen ? "rotate-180" : ""}`} />
               </button>
               
               {isMobileDropdownOpen && (

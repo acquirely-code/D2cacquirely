@@ -57,9 +57,13 @@ export default function Footer() {
         {/* COLUMN 3: Legal */}
         <div className="md:ml-20">
           <h4 className="font-opensans text-lg font-bold text-[#0F172A]">Legal</h4>
-          <div className="mt-4 space-y-4 text-base text-[#64748B] mt-5">
-            <p className="cursor-pointer transition hover:text-[#0F172A]">Terms & Conditions</p>
-            <p className="cursor-pointer transition hover:text-[#0F172A]">Privacy Policy</p>
+          <div className="mt-4 space-y-4 text-base text-[#64748B] ">
+            <Link href="/term-and-services">
+              <p className="cursor-pointer transition hover:text-[#0F172A]">Terms & Conditions</p>
+            </Link>
+            <Link href="/privacy-policy">
+              <p className="cursor-pointer  mt-6 transition hover:text-[#0F172A]">Privacy Policy</p>
+            </Link>
           </div>
         </div>
 

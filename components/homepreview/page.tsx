@@ -5,6 +5,13 @@ import Navbar from "../Navbar"; // Adjust path if needed
 import Footer from "@/components/Footer";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link"
+import {
+  Facebook,
+  Twitter,
+  Instagram,
+  Linkedin,
+  Youtube
+} from "lucide-react";
 
 // Icons
 import {
@@ -286,8 +293,48 @@ export default function HomePage() {
 
   return (
     <main className="overflow-hidden bg-white text-[#0F172A]">
+      <div className="fixed right-0 top-1/2 z-[9999] flex -translate-y-1/2 flex-col gap-[2px]">
+              {/* Facebook */}
+              <Link 
+                 target="_blank"
+                href="https://www.facebook.com/profile.php?id=61578312825291#" 
+                className="group relative -right-[110px] flex h-[50px] w-[160px] items-center justify-between rounded-l-md bg-[#1877F2] px-[15px] font-sans text-base font-bold text-white transition-all duration-300 ease-in-out hover:right-0 max-md:right-0 max-md:w-[50px] max-md:justify-center max-md:px-0"
+              >
+                <Facebook className="h-5 w-5" />
+                <span className="max-md:hidden">Facebook</span>
+              </Link>
+              {/* Instagram */}
+              <Link 
+                target="_blank"
+                href="https://www.instagram.com/acquirely.in" 
+                className="group relative -right-[110px] flex h-[50px] w-[160px] items-center justify-between rounded-l-md bg-[#E4405F] px-[15px] font-sans text-base font-bold text-white transition-all duration-300 ease-in-out hover:right-0 max-md:right-0 max-md:w-[50px] max-md:justify-center max-md:px-0"
+              >
+                <Instagram className="h-5 w-5" />
+                <span className="max-md:hidden">Instagram</span>
+              </Link>
+      
+              {/* LinkedIn */}
+              <Link 
+               target="_blank"
+                href="https://www.linkedin.com/company/acquirelydm/" 
+                className="group relative -right-[110px] flex h-[50px] w-[160px] items-center justify-between rounded-l-md bg-[#0A66C2] px-[15px] font-sans text-base font-bold text-white transition-all duration-300 ease-in-out hover:right-0 max-md:right-0 max-md:w-[50px] max-md:justify-center max-md:px-0"
+              >
+                <Linkedin className="h-5 w-5" />
+                <span className="max-md:hidden">LinkedIn</span>
+              </Link>
+      
+              {/* YouTube */}
+              <Link 
+               target="_blank"
+                href="https://www.youtube.com/@acquirelymedia" 
+                className="group relative -right-[110px] flex h-[50px] w-[160px] items-center justify-between rounded-l-md bg-[#FF0000] px-[15px] font-sans text-base font-bold text-white transition-all duration-300 ease-in-out hover:right-0 max-md:right-0 max-md:w-[50px] max-md:justify-center max-md:px-0"
+              >
+                <Youtube className="h-5 w-5" />
+                <span className="max-md:hidden">YouTube</span>
+              </Link>
+            </div>
       {/* HERO SECTION */}
-      <section className="relative overflow-hidden bg-white pb-16 pt-8 md:pb-[160px] md:pt-[96px]">
+      <section className="relative overflow-hidden bg-white pb-16 pt-8 md:pb-[160px] md:pt-[46px]">
         {/* Premium Background Layers */}
         <div className="absolute right-[-5%] top-[-10%] z-0 h-[300px] w-[300px] rounded-full bg-blue-600/10 blur-[60px] md:h-[600px] md:w-[600px]" />
         <div className="absolute bottom-[-10%] left-[-5%] z-0 h-[300px] w-[300px] rounded-full bg-purple-500/10 blur-[50px] md:h-[600px] md:w-[600px]" />

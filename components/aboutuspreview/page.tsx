@@ -21,6 +21,15 @@ import {
   Layers,
   Eye,
 } from "lucide-react";
+import Link from "next/link";
+
+import {
+  Facebook,
+  Twitter,
+  Instagram,
+  Linkedin,
+  Youtube
+} from "lucide-react";
 
 import Collabration from "@/app/assests/officecollab.png";
 import kunalImage from "@/app/assests/kunalmondal.png";
@@ -117,8 +126,48 @@ const differentiators = [
 export default function   AboutPage() {
   return (
     <main className="overflow-hidden bg-white text-[#111827]">
+      <div className="fixed right-0 top-1/2 z-[9999] flex -translate-y-1/2 flex-col gap-[2px]">
+              {/* Facebook */}
+              <Link 
+                 target="_blank"
+                href="https://www.facebook.com/profile.php?id=61578312825291#" 
+                className="group relative -right-[110px] flex h-[50px] w-[160px] items-center justify-between rounded-l-md bg-[#1877F2] px-[15px] font-sans text-base font-bold text-white transition-all duration-300 ease-in-out hover:right-0 max-md:right-0 max-md:w-[50px] max-md:justify-center max-md:px-0"
+              >
+                <Facebook className="h-5 w-5" />
+                <span className="max-md:hidden">Facebook</span>
+              </Link>
+              {/* Instagram */}
+              <Link 
+                target="_blank"
+                href="https://www.instagram.com/acquirely.in" 
+                className="group relative -right-[110px] flex h-[50px] w-[160px] items-center justify-between rounded-l-md bg-[#E4405F] px-[15px] font-sans text-base font-bold text-white transition-all duration-300 ease-in-out hover:right-0 max-md:right-0 max-md:w-[50px] max-md:justify-center max-md:px-0"
+              >
+                <Instagram className="h-5 w-5" />
+                <span className="max-md:hidden">Instagram</span>
+              </Link>
+      
+              {/* LinkedIn */}
+              <Link 
+               target="_blank"
+                href="https://www.linkedin.com/company/acquirelydm/" 
+                className="group relative -right-[110px] flex h-[50px] w-[160px] items-center justify-between rounded-l-md bg-[#0A66C2] px-[15px] font-sans text-base font-bold text-white transition-all duration-300 ease-in-out hover:right-0 max-md:right-0 max-md:w-[50px] max-md:justify-center max-md:px-0"
+              >
+                <Linkedin className="h-5 w-5" />
+                <span className="max-md:hidden">LinkedIn</span>
+              </Link>
+      
+              {/* YouTube */}
+              <Link 
+               target="_blank"
+                href="https://www.youtube.com/@acquirelymedia" 
+                className="group relative -right-[110px] flex h-[50px] w-[160px] items-center justify-between rounded-l-md bg-[#FF0000] px-[15px] font-sans text-base font-bold text-white transition-all duration-300 ease-in-out hover:right-0 max-md:right-0 max-md:w-[50px] max-md:justify-center max-md:px-0"
+              >
+                <Youtube className="h-5 w-5" />
+                <span className="max-md:hidden">YouTube</span>
+              </Link>
+            </div>
       {/* HERO SECTION (Merged Dark Theme with HTML Messaging) */}
-   <section className="relative overflow-hidden bg-white pb-16 pt-8 md:pb-[160px] md:pt-[96px]">
+   <section className="relative overflow-hidden bg-white pb-16 pt-8 md:pb-[160px] md:pt-[46px]">
         {/* Background Blur Effects (Lowered opacity for light mode) */}
         <div className="absolute right-[-5%] top-[-10%] z-0 h-[600px] w-[600px] rounded-full bg-blue-600/5 blur-[60px]"></div>
         <div className="absolute bottom-[-10%] left-[-5%] z-0 h-[600px] w-[600px] rounded-full bg-purple-500/5 blur-[50px]"></div>
@@ -126,7 +175,6 @@ export default function   AboutPage() {
         <div className="relative z-10 mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-20">
           
           <Navbar />
-
           <div className="mx-auto mt-16 max-w-[1000px] text-center sm:mt-24">
             <div className="mb-6 inline-flex items-center gap-1.5 rounded-full bg-[#EEEDFE] px-4 py-2 text-xs font-bold text-[#534AB7]">
               <Store className="h-4 w-4" />
