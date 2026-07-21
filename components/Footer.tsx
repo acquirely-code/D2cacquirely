@@ -46,7 +46,7 @@ export default function Footer() {
             <p className="cursor-pointer transition hover:text-[#0F172A] mt-5">Ecommerce</p>
             </Link>
               <Link href="/lead-gen">
-            <p className="cursor-pointer transition hover:text-[#0F172A] mt-5">Lead Gen</p>
+            <p className="cursor-pointer transition hover:text-[#0F172A] mt-5">Lead Generation</p>
             </Link>
               <Link href="/aboutus">
             <p className="cursor-pointer transition hover:text-[#0F172A] mt-5">About us</p>
