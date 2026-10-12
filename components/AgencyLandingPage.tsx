@@ -4,6 +4,7 @@ import FlywheelProofSection from "@/components/FlywheelProofSection";
 import FoundersSection from "@/components/FoundersSection";
 import GrowthSystemProblemSection from "@/components/GrowthSystemProblemSection";
 import PricingSection from "@/components/PricingSection";
+import InHouseCostSection from "@/components/InHouseCostSection";
 import CtaBreakPastSection from "./CtaBreakPastSection";
 import Hero from "@/components/Hero"
 import ScalingFrameworkSection from "./ScalingFrameworkSection";
@@ -15,6 +16,7 @@ export default function AgencyLandingPage() {
       <A3FlywheelSection />
       <FlywheelProofSection />
       <PricingSection />
+      <InHouseCostSection />
       {/* <CostBreakdownSection /> */}
       <FoundersSection />
       <FaqSection />

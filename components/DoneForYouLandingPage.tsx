@@ -12,6 +12,7 @@ import { ArrowRight, MousePointer2 } from 'lucide-react';
 import { ShieldCheck, TrendingUp, UserCheck, Zap } from "lucide-react";
 import { Pointer } from 'lucide-react';
 import logo from "@/app/assests/logo.png";
+import InHouseCostSection from "@/components/InHouseCostSection";
   import React from "react";
 
 
@@ -69,13 +70,6 @@ const hiddenCostLeft = [
     icon: <DollarSign className="h-4 w-4 text-[#FF6467]" /> 
   },
 ];
-const inHouseRoles = [
-  { role: "Meta Performance Marketer", cost: "$6,500" },
-  { role: "Creative Strategist", cost: "$5,000" },
-  { role: "Video Editor", cost: "$3,500" },
-  { role: "Graphic Designer", cost: "$3,500" },
-];
-
 const additionalFeatures = [
   "A proven scaling\nframework",
   "A structured creative\ntesting system",
@@ -1062,6 +1056,8 @@ export default function DoneForYouLandingPage() {
 
       </div>
     </section>
+
+      <InHouseCostSection />
 
       <section className="bg-[#F9FAFB]">
         <div className="mx-auto max-w-[1440px] px-4 py-10 sm:px-8 sm:py-12 lg:px-[167px] lg:py-16">

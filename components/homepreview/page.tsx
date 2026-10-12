@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Navbar from "../Navbar"; // Adjust path if needed
 import Footer from "@/components/Footer";
+import InHouseCostSection from "@/components/InHouseCostSection";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link"
 import {
@@ -704,6 +705,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <InHouseCostSection />
 
       <Footer />
     </main>
