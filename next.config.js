@@ -23,6 +23,11 @@ const nextConfig = {
     ],
   },
 
+  // Static med spa landing page lives in public/medspa/index.html
+  async rewrites() {
+    return [{ source: "/medspa", destination: "/medspa/index.html" }];
+  },
+
   async headers() {
     return [
       {
