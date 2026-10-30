@@ -6,8 +6,6 @@
 <style>
 :root{--navy:#0F172A;--blue:#496690;--yellow:#F37513;--lav:#B3A3D6;--paper:#fff;--soft:#F2F5FA;--ink:#0F172A;--mut:#475569;--line:#E2E8F0;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#0B1120;--soft:#161B26;--ink:#F1F5F9;--mut:#94A3B8;--line:#1E293B}}
-:root[data-theme="dark"]{--paper:#0B1120;--soft:#161B26;--ink:#F1F5F9;--mut:#94A3B8;--line:#1E293B}
 *,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
 body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.65 'Open Sans',system-ui,sans-serif}
 h1,h2,h3,.m{font-family:'Montserrat',system-ui,sans-serif;letter-spacing:-.02em;line-height:1.08;margin:0 0 .5em}
@@ -436,8 +434,134 @@ body.lb-on{overflow:hidden}
 .fvid-alt{margin:10px 0 0;font-size:.88rem}.fvid-alt a{color:var(--blue);font-weight:700;text-decoration:none}
 .fvid wistia-player{position:absolute;inset:0;display:block;width:100%;height:100%}
 .fvid wistia-player[media-id='t01bxjcw4g']:not(:defined){background:center / contain no-repeat url('https://fast.wistia.com/embed/medias/t01bxjcw4g/swatch');filter:blur(5px)}
+
+/* ============ acquirely.in design layer ============
+   Matches the shared landing-page design (app/ecommerce/ecommerce.css): Montserrat + Open Sans,
+   indigo→orange gradient, pill nav, indigo pill buttons, white/mist/dark bands, 12px cards. */
+:root{--navy:#0B0F19;--blue:#2B7FFF;--yellow:#F37513;--paper:#fff;--soft:#F7F9FC;--ink:#09090B;--mut:#475569;--line:#E4E4E7;--indigo:#6366F1;--indigo-2:#4F46E5;--grad:linear-gradient(90deg,#6366F1,#F97316);--btn:linear-gradient(102.78deg,#6366F1,#4F46E5);--shadow:0 1px 2px rgba(15,23,42,.04),0 6px 20px rgba(15,23,42,.05);color-scheme:light}
+body{background:var(--soft);color:var(--mut);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{color:var(--ink);letter-spacing:-.01em;line-height:1.15;text-wrap:balance}
+h1{font-size:clamp(34px,4.4vw,52px);font-weight:800;line-height:1.1}
+h2{font-size:clamp(28px,3.6vw,40px);font-weight:700}
+.lead{font-size:clamp(16px,1.6vw,19px);color:#71717B}
+.y{color:var(--yellow)}
+.gt{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+section{padding:clamp(64px,8vw,96px) 0}
+section:not(.dark):not(.blue):not(.rx){background:#fff}
+section[style*="--soft"],.ecx .ec-mist{background:var(--soft)!important}
+.wrap{max-width:1140px;padding:0 20px}
+:focus-visible{outline:3px solid var(--indigo);outline-offset:3px}
+
+/* Centered section heads, like acquirely.in (split layouts keep their columns) */
+section > .wrap:not(.split):not(.td) > h2:first-child{text-align:center;margin-left:auto;margin-right:auto;max-width:760px}
+section > .wrap:not(.split):not(.td) > h2:first-child + .lead{text-align:center;margin-left:auto;margin-right:auto;max-width:720px}
+#why .reasons,#why .fq{margin-left:auto;margin-right:auto}
+#faq h2{margin-bottom:28px}
+
+/* Buttons: indigo pill */
+.btn{background:var(--btn);color:#fff;font:700 16px/1.2 'Open Sans',system-ui,sans-serif;letter-spacing:.01em;padding:18px 32px;border-radius:9999px;border:0;box-shadow:0 10px 24px -6px rgba(99,102,241,.45);transition:transform .15s,box-shadow .15s}
+.btn:hover{filter:none;transform:translateY(-2px);box-shadow:0 14px 30px -6px rgba(99,102,241,.55)}
+.btn::after{display:none}
+.btn.s{background:#fff;color:var(--ink);border:1px solid var(--line);box-shadow:none}
+.btn.s:hover{border-color:var(--indigo);color:var(--indigo-2)}
+.dark .btn.s,.blue .btn.s{background:transparent;color:#fff;border-color:rgba(255,255,255,.35)}
+
+/* Nav: sticky glass pill with the logo */
+#pg{background:var(--grad)}
+nav{position:sticky;top:14px;z-index:30;margin-top:14px;padding:0 20px;background:transparent;-webkit-backdrop-filter:none;backdrop-filter:none}
+nav .wrap{max-width:1140px;margin:0 auto;min-height:0;height:auto;display:flex;align-items:center;justify-content:space-between;gap:18px;background:rgba(255,255,255,.75);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border:1px solid #E5E7EB;border-radius:12px;padding:10px 12px 10px 20px;box-shadow:0 10px 30px -12px rgba(99,102,241,.25)}
+.logo img{height:44px;width:auto;display:block}
+.links a{font:600 15px 'Montserrat',system-ui,sans-serif;color:var(--ink);padding:8px 12px;border-radius:8px}
+.links a:hover,.links a.act{background:#EEF2FF;color:var(--indigo-2)}
+nav .btn{background:#0052FF;border-radius:8px;padding:11px 20px;font:700 14px 'Montserrat',system-ui,sans-serif;box-shadow:none}
+nav .btn:hover{background:#1D4ED8;box-shadow:none}
+@media(max-width:820px){nav .wrap{padding:8px 10px 8px 14px}.logo img{height:36px}nav .btn{padding:10px 14px;font-size:13px}}
+
+/* Hero: soft indigo/orange glow, as on acquirely.in */
+.lite::before,.dark::before,.blue::before,.offer::before{display:none}
+.hero.lite{margin-top:-80px;padding:calc(80px + clamp(48px,6vw,80px)) 0 clamp(56px,7vw,80px);background:var(--soft)}
+.hero.lite::after{content:"";position:absolute;inset:0;background:radial-gradient(600px 400px at 12% 10%,rgba(99,102,241,.12),transparent 70%),radial-gradient(700px 480px at 92% 20%,rgba(99,102,241,.14),transparent 70%),radial-gradient(500px 300px at 70% 90%,rgba(249,115,22,.08),transparent 70%);pointer-events:none}
+.hero .wrap{position:relative;z-index:1}
+.hero .lead{color:var(--mut)}
+.chips2 b{background:#fff;border-color:var(--line);color:var(--ink)}
+.inv .cur,.inv .acq{border-radius:12px;box-shadow:0 30px 60px -30px rgba(79,70,229,.45)}
+.inv .acq{border-top:4px solid transparent;background:linear-gradient(#fff,#fff) padding-box,var(--grad) border-box}
+.acq .lab{color:var(--indigo-2)}
+.half{background:var(--btn);color:#fff}
+.sv b{background:#ECFDF5;color:#16A34A}
+
+/* Dark bands */
+.dark,.blue,.offer{background:var(--navy);color:#8B92A5}
+.dark h2,.dark h3,.dark h4,.blue h2,.blue h3,.blue h4{color:#fff}
+.dark .lead,.dark p,.blue p,.blue .lead{color:#8B92A5}
+.offer .wrap>div{background:#161B26;border:1px solid #262C3A;border-radius:12px;-webkit-backdrop-filter:none;backdrop-filter:none}
+.offer b.y,.blue .y,.dark .y{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.reasons>div{border-top:0;background:#161B26;border:1px solid #262C3A;border-radius:12px;padding:26px}
+.strip b{border-color:#262C3A;background:#161B26;color:#fff}
+.slot{background:#161B26;border:1px solid #262C3A;border-radius:12px;-webkit-backdrop-filter:none;backdrop-filter:none}
+.slot .st{background:var(--yellow)}
+.zs>div.glass{background:#161B26;border:1px solid #262C3A;box-shadow:none;border-radius:12px;-webkit-backdrop-filter:none;backdrop-filter:none}
+.zs b{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.assets{background:#161B26;border-color:var(--yellow);border-radius:12px}
+.sw b{background:#fff;border-radius:12px}.sw b.a{background:var(--btn)}
+.steps li.on::before,#steps li.on::before{background:var(--indigo);border-color:var(--indigo)}
+.fq{border-radius:12px;border-left:4px solid #2563EB;background:#fff;box-shadow:var(--shadow)}
+.fq::before{color:var(--indigo)}
+.blue .fq,.dark .fq{background:#161B26;border-color:#262C3A;border-left-color:var(--indigo)}
+.photo .glass{background:rgba(11,15,25,.55);border-color:rgba(255,255,255,.18);border-radius:16px}
+.doc{border-radius:12px}
+
+/* Cards */
+.pc,.sg>div,.rp>div,.cc>div,.a3>div,.rc,.lp div,.tree .g,.calc{border-radius:12px;box-shadow:var(--shadow)}
+.pc,.sg>div,.rp>div,.a3>div,.rc,.tree .g{background:#fff;border:1px solid var(--line)}
+.pc .to,.lp div b,.calc .o.big2 b{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.pc .flow,.mtag,.lab{font:700 12px 'Open Sans',system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase}
+.mtag,.pc .flow{color:var(--blue)}
+.tree .g{border-top:4px solid var(--indigo)}
+.tree .g::before,.tree::before{background:var(--indigo)}
+.tree::after{background:linear-gradient(90deg,#6366F1,#F97316,#6366F1);background-size:200% 100%}
+.hub{background:var(--btn);border:0;box-shadow:0 10px 24px -6px rgba(99,102,241,.45)}
+.tree li::before{background:var(--indigo)}
+.cc>div{border-top:3px solid var(--indigo);background:#fff;border-left:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:20px}
+.tg{background:#EEF2FF;color:var(--indigo-2)}.tg.k{background:var(--btn);color:#fff}
+.a3>div{border-left:4px solid var(--blue)}.a3>div:nth-child(3){border-left-color:var(--yellow)}
+.lp div:last-child{background:var(--navy)}
+.ct td:nth-child(3),.ct th:nth-child(3){background:#EEF2FF}
+.tw{border-radius:12px;background:#fff}
+.excl{background:#FFF4ED;border-left-color:var(--yellow)}
+.disc{border-radius:0 12px 12px 0}
+.calc .fld{border-color:var(--indigo)}
+.calc .out{background:#161B26}
+.calc input[type=range]{accent-color:var(--indigo)}
+.td li::before{background:#EEF2FF;color:var(--indigo-2);font-weight:800}
+.vid{background:#111214;border-radius:16px;box-shadow:0 30px 70px -30px rgba(15,23,42,.55)}
+.vid .play{background:var(--btn);box-shadow:0 0 0 12px rgba(99,102,241,.2)}
+.fvid{border-radius:16px;overflow:hidden;box-shadow:0 30px 70px -30px rgba(15,23,42,.55)}
+.ecx .ec-eyebrow{color:var(--blue);font-family:'Open Sans',system-ui,sans-serif;font-size:12px}
+.ecx .ec-h2{font-size:clamp(28px,3.6vw,40px);font-weight:700}
+.ecx .ec-btn{border-radius:9999px}
+
+/* FAQ: accordion cards */
+#faq .wrap{max-width:860px}
+#faq details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:0 22px;transition:box-shadow .2s,border-color .2s}
+#faq details + details{margin-top:10px}
+#faq details[open]{box-shadow:var(--shadow);border-color:#C7D2FE}
+#faq summary{list-style:none;padding:18px 34px 18px 0;font:700 16px 'Montserrat',system-ui,sans-serif;color:var(--ink);position:relative}
+#faq summary::-webkit-details-marker{display:none}
+#faq summary::after{content:"";position:absolute;right:2px;top:50%;width:9px;height:9px;border-right:2px solid var(--indigo);border-bottom:2px solid var(--indigo);transform:translateY(-70%) rotate(45deg);transition:transform .2s}
+#faq details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
+#faq details p{margin:0;padding:0 0 20px;font-size:15.5px}
+
+/* Footer + mobile CTA */
+footer{background:var(--navy);color:#8B92A5;font-size:14px;padding:48px 0 100px}
+footer .foot-in{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px}
+footer .foot-in img{height:52px;width:auto}
+@media(min-width:821px){footer{padding-bottom:40px}}
+.sticky{background:transparent;-webkit-backdrop-filter:none;backdrop-filter:none;padding:0 12px calc(12px + env(safe-area-inset-bottom,0px))}
+.sticky .btn{width:100%;text-align:center}
+#quote .up{max-width:720px;margin-left:auto;margin-right:auto}#quote .wrap>div:last-child{text-align:center}
 </style></head><body>
-<nav id="top"><div class="wrap"><a class="logo" href="#top">Acquirely</a><div class="links"><a href="#pricing">Pricing</a><a href="#system">What you get</a><a href="#why">Why half</a><a href="#results">Results</a><a href="#teardown">Free teardown</a><a href="#faq">FAQ</a></div><a class="btn" href="https://forms.acquirely.in/acquirely/form/FunnelReviewCallECom/formperma/muJYVHXbKDbQ7N3xEPr_lrjkOuBMe33JPNULGFJm9Kg" target="_blank" rel="noopener">BOOK A CONSULTATION</a></div></nav><div id="pg"></div>
+<nav id="top"><div class="wrap"><a class="logo" href="#top" aria-label="Acquirely home"><img src="/ecommerce/img/01-acquirely-the-science-behind-scale.png" alt="Acquirely — The Science Behind Scale" width="640" height="208"></a><div class="links"><a href="#pricing">Pricing</a><a href="#system">What you get</a><a href="#why">Why half</a><a href="#results">Results</a><a href="#teardown">Free teardown</a><a href="#faq">FAQ</a></div><a class="btn" href="https://forms.acquirely.in/acquirely/form/FunnelReviewCallECom/formperma/muJYVHXbKDbQ7N3xEPr_lrjkOuBMe33JPNULGFJm9Kg" target="_blank" rel="noopener">BOOK A CONSULTATION</a></div></nav><div id="pg"></div>
 
 <header class="hero lite"><div class="wrap">
 <div><h1>Show us your agency invoice. We'll cut it <span class="gt">in half.</span></h1>
@@ -709,7 +833,7 @@ body.lb-on{overflow:hidden}
 <div style="margin-top:22px"><a class="btn" href="https://forms.acquirely.in/acquirely/form/FunnelReviewCallECom/formperma/muJYVHXbKDbQ7N3xEPr_lrjkOuBMe33JPNULGFJm9Kg" target="_blank" rel="noopener">BOOK A CONSULTATION</a><p style="margin:14px 0 0;color:#E2E8F0;font-size:.9rem">Confidential. No obligation. No hard sell.</p></div>
 </div></section>
 
-<footer><div class="wrap">Acquirely &middot; acquirely.agency &middot; Serving med spas across North America</div></footer>
+<footer><div class="wrap"><div class="foot-in"><img src="/ecommerce/img/28-acquirely-the-science-behind-scale.png" alt="Acquirely — The Science Behind Scale" width="640" height="208"><p>Acquirely &middot; acquirely.agency &middot; Serving med spas across North America</p></div></div></footer>
 <div class="sticky" id="stk"><a class="btn" href="https://forms.acquirely.in/acquirely/form/FunnelReviewCallECom/formperma/muJYVHXbKDbQ7N3xEPr_lrjkOuBMe33JPNULGFJm9Kg" target="_blank" rel="noopener">BOOK A CONSULTATION</a></div>
 <script>
 document.documentElement.classList.add('js');

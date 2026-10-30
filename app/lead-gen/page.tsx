@@ -1,4 +1,6 @@
-import DoneForYouLandingPage from "@/components/DoneForYouLandingPage";
-export default function HomePage() {
-  return <DoneForYouLandingPage />;
+import Landing from "@/app/ecommerce/Landing";
+import markup from "./markup";
+
+export default function LeadGenPage() {
+  return <Landing markup={markup} />;
 }

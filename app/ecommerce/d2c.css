@@ -1,0 +1,162 @@
+/* Components the acquirely.ca pages need on top of ecommerce.css + home.css. Every rule is under .ecom. */
+
+/* Hero */
+.ecom .hero .d-sub{font-size:clamp(19px,2vw,23px);font-weight:700;margin-top:22px;color:var(--ink)}
+.ecom .hero .d-sub + .lede{margin-top:10px}
+.ecom .d-hero-img{width:100%;max-width:640px;height:auto;margin-inline:auto}
+.ecom .hub-rows.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:860px){.ecom .hub-rows.three{grid-template-columns:1fr}
+.ecom .hub-rows.three .hub-row{grid-template-columns:minmax(0,1fr) auto}
+.ecom .hub-rows.three .hub-row .t{grid-column:2;justify-self:end}
+}
+.ecom .hub-note{text-align:left}
+.ecom .bl.face img{width:100%;height:100%;object-fit:cover}
+.ecom .hub-note{display:grid;grid-template-columns:40px 1fr;gap:12px;align-items:start;margin-top:14px;padding:14px;border-radius:10px;background:#EEF2FF;border:1px solid #C7D2FE}
+.ecom .hub-note .ic{width:40px;height:40px;border-radius:10px;background:#fff;display:grid;place-items:center}
+.ecom .hub-note b{display:block;font-family:var(--display);color:var(--ink);font-size:14.5px}
+.ecom .hub-note p{font-size:13.5px;line-height:1.5;margin-top:2px}
+.ecom .hub-note p strong{color:var(--indigo-2)}
+
+/* Case-study ticker */
+.ecom .strip .marquee img{height:26px;width:auto;max-width:none;flex:none}
+
+/* Fixed social rail (homepage) */
+.ecom .d-social{position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:35;display:grid;gap:2px}
+.ecom .d-social a{display:flex;align-items:center;gap:10px;width:150px;margin-right:-104px;padding:12px 14px;border-radius:8px 0 0 8px;color:#fff;font-weight:700;font-size:14px;text-decoration:none;transition:margin .25s}
+.ecom .d-social a:hover,.ecom .d-social a:focus-visible{margin-right:0}
+.ecom .d-social svg{flex:none}
+@media (max-width:760px){.ecom .d-social{display:none}
+}
+
+/* Tabs (services filter) */
+.ecom .d-tabs{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;width:max-content;max-width:100%;margin:-20px auto 32px;background:#fff;border:1px solid var(--line);border-radius:22px;padding:5px;box-shadow:var(--shadow)}
+.ecom .d-tabs button{border:0;cursor:pointer;border-radius:9999px;padding:10px 18px;min-height:44px;font-family:var(--display);font-weight:700;font-size:14px;background:transparent;color:var(--ink)}
+.ecom .d-tabs button[aria-pressed="true"]{background:var(--btn);color:#fff}
+.ecom [data-cat][hidden]{display:none}
+.ecom .hm-svc{position:relative}
+.ecom .hm-svc .d-no{position:absolute;top:18px;right:22px;font-family:var(--display);font-weight:800;font-size:44px;line-height:1;color:rgba(15,23,42,.05)}
+.ecom .d-badge{justify-self:start;display:inline-block;font-size:12.5px;font-weight:600;color:var(--indigo-2);background:#EEF2FF;border-radius:9999px;padding:5px 12px;line-height:1.4}
+.ecom .d-badge.o{color:#C2410C;background:var(--orange-soft)}
+
+/* A3 phases */
+.ecom .d-phases{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:14px;align-items:stretch}
+@media (max-width:900px){.ecom .d-phases{grid-template-columns:1fr}
+.ecom .d-phase-arrow{display:none}
+}
+.ecom .d-phase-arrow{display:grid;place-items:center;color:#CBD5E1}
+.ecom .d-phase{font:inherit;text-align:left;cursor:pointer;padding:26px;display:grid;gap:8px;align-content:start;position:relative;color:var(--text);transition:transform .2s,box-shadow .2s,border-color .2s}
+.ecom .d-phase:hover{transform:translateY(-2px)}
+.ecom .d-phase[aria-pressed="true"]{border-color:var(--indigo);box-shadow:0 0 0 3px rgba(99,102,241,.18),0 18px 40px -20px rgba(79,70,229,.45)}
+.ecom .d-phase .d-phase-n{position:absolute;top:14px;right:20px;font-family:var(--display);font-weight:800;font-size:56px;line-height:1;color:rgba(15,23,42,.05)}
+.ecom .d-phase .ic{width:44px;height:44px;border-radius:12px;background:var(--blue-soft);display:grid;place-items:center;margin-bottom:6px}
+.ecom .d-phase .ic.o{background:var(--orange-soft)}
+.ecom .d-phase small{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--indigo-2)}
+.ecom .d-phase h3{font-size:24px}
+.ecom .d-phase p{font-size:15px}
+.ecom .d-phase .d-badge{margin-top:6px;color:#C2410C;background:var(--orange-soft)}
+.ecom .d-panel{margin-top:22px;padding:28px}
+.ecom .d-panel h3{font-size:20px}
+.ecom .d-panel > p{margin-top:6px;font-size:15px}
+.ecom .d-panel-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px}
+@media (max-width:700px){.ecom .d-panel-grid{grid-template-columns:1fr}
+}
+.ecom .d-panel-grid > div{border:1px solid var(--line);border-radius:10px;padding:16px 18px;background:var(--bg);display:grid;gap:4px}
+.ecom .d-panel-grid small{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.ecom .d-panel-grid b{font-family:var(--display);color:var(--ink);font-size:15px}
+.ecom .d-panel-grid span{font-size:14.5px}
+
+/* Card grids */
+.ecom .d-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.ecom .d-cards.four{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:1000px){.ecom .d-cards.four{grid-template-columns:1fr 1fr}
+}
+@media (max-width:900px){.ecom .d-cards{grid-template-columns:1fr 1fr}
+}
+@media (max-width:600px){.ecom .d-cards,.ecom .d-cards.four{grid-template-columns:1fr}
+}
+.ecom .d-card{padding:26px;display:grid;gap:10px;align-content:start}
+.ecom .d-card .ic{width:40px;height:40px;border-radius:10px;background:var(--blue-soft);display:grid;place-items:center}
+.ecom .d-card .ic.o{background:var(--orange-soft)}
+.ecom .d-card h3{font-size:18px}
+.ecom .d-card p{font-size:15px}
+.ecom .d-card .d-badge{margin-top:6px}
+
+/* Dark stat cards with a heading + description (Why the Flywheel wins) */
+.ecom .stats.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:900px){.ecom .stats.three{grid-template-columns:1fr}
+}
+.ecom .stat h3{font-size:19px;color:#fff}
+.ecom .stat p{font-size:14.5px;color:var(--dark-muted)}
+.ecom .stat .d-val{margin-top:10px;padding-top:14px;border-top:1px solid var(--dark-line)}
+.ecom .stat .d-val b{display:block;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* Case studies */
+.ecom .d-mt{width:100%;border-collapse:collapse;font-size:14.5px;font-variant-numeric:tabular-nums;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.ecom .d-mt th{text-align:left;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);background:var(--bg);padding:10px 14px}
+.ecom .d-mt td{padding:11px 14px;border-top:1px solid var(--line);color:var(--ink)}
+.ecom .d-mt td:first-child{color:var(--text)}
+.ecom .d-mt td b{color:var(--good);font-weight:700}
+.ecom .d-quote{margin:0;border-left:4px solid #2563EB;padding:4px 0 4px 16px}
+.ecom .d-quote p{font-style:italic;color:var(--ink);font-size:15.5px}
+.ecom .d-quote cite{display:block;margin-top:6px;font-style:normal;font-family:var(--display);font-weight:700;font-size:14px;color:var(--ink)}
+.ecom .d-stars{display:block;color:#F59E0B;letter-spacing:2px;font-size:14px;margin-bottom:4px}
+.ecom .d-steps{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:15px;color:var(--ink)}
+.ecom .d-steps li{display:grid;grid-template-columns:34px 1fr;gap:8px}
+.ecom .d-steps li b{font-family:var(--display);color:var(--indigo-2)}
+.ecom .proof-shot video{display:block;width:100%;height:auto;border-radius:7px}
+.ecom .d-more{margin-top:22px}
+.ecom .d-more > summary{list-style:none;cursor:pointer;display:flex;justify-content:center}
+.ecom .d-more > summary::-webkit-details-marker{display:none}
+.ecom .d-more > summary::after{display:none}
+.ecom .d-more > summary > span{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--ink);border:1px solid var(--line);font-weight:700;font-size:15px;padding:12px 22px;border-radius:9999px}
+.ecom .d-more > summary > span:hover{border-color:var(--indigo);color:var(--indigo-2)}
+.ecom .d-more .when-open{display:none}
+.ecom .d-more[open] .when-open{display:inline}
+.ecom .d-more[open] .when-closed{display:none}
+.ecom .d-more .cases{margin-top:22px}
+.ecom .d-more,.ecom .d-more[open]{background:none;border:0;padding:0;box-shadow:none}
+.ecom .d-more > summary{padding:0}
+.ecom .d-more p{padding:0}
+
+/* Pricing */
+.ecom .tier .big small{font-size:16px;font-weight:600;color:var(--muted);letter-spacing:0;margin-left:6px}
+.ecom .tier .fine-print{font-size:13px;color:var(--muted);margin-top:4px}
+.ecom .tier .flag{position:absolute;top:18px;right:18px;font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:var(--btn);border-radius:9999px;padding:4px 10px}
+.ecom .tier h3{font-size:24px}
+.ecom .tier .inc{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:22px}
+.ecom .tier .inc + ul{margin-top:10px;padding-top:0;border-top:0}
+.ecom .d-terms{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 22px;margin-top:22px;font-size:14px;color:var(--muted)}
+.ecom .d-terms span{display:inline-flex;align-items:center;gap:6px}
+.ecom .promise-top{margin-top:28px}
+.ecom .d-chks{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:12px}
+.ecom .d-chks span{display:inline-flex;align-items:center;gap:6px;color:#E0E7FF;font-size:14px;margin:0}
+.ecom .d-narrow{max-width:820px}
+.ecom .inhouse tr.total td{color:var(--bad)}
+.ecom .inhouse tr.total small{font-family:var(--body);font-size:13px;font-weight:600}
+
+/* Accountability (dark) */
+.ecom .promise .stat .ic{width:40px;height:40px;border-radius:10px;background:rgba(255,255,255,.06);display:grid;place-items:center;margin-bottom:6px}
+
+/* Founders */
+.ecom .d-checks{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:8px;font-size:14.5px;color:var(--ink)}
+.ecom .d-checks li{display:grid;grid-template-columns:22px 1fr;gap:8px}
+.ecom .d-checks li::before{content:"";width:18px;height:18px;margin-top:3px;border-radius:50%;background:#EEF2FF url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234F46E5' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12.5l4 4L18 8'/%3E%3C/svg%3E") center/11px no-repeat}
+.ecom .person p.role{margin-bottom:10px}
+
+/* Lead gen: what matters list (green ticks) */
+.ecom .d-yes{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.ecom .d-yes li{display:grid;grid-template-columns:26px 1fr;gap:10px;font-size:15.5px;color:var(--ink)}
+.ecom .d-yes li::before{content:"";width:22px;height:22px;border-radius:7px;background:#DCFCE7 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2316A34A' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12.5l4 4L18 8'/%3E%3C/svg%3E") center/12px no-repeat}
+.ecom .x-list li b,.ecom .d-yes li b{display:block;font-family:var(--display)}
+.ecom .x-list li span,.ecom .d-yes li span{font-size:14.5px;color:var(--text)}
+.ecom .d-callout{max-width:760px;margin:28px auto 0;text-align:center;font-size:16px}
+.ecom .d-callout b{color:var(--ink)}
+
+/* Final CTA */
+.ecom .dcard .d-terms{justify-content:flex-start;color:var(--dark-muted)}
+.ecom .dcard .d-terms span{margin:0}
+
+/* Footer */
+.ecom .d-socials{display:flex;gap:14px;margin-top:14px}
+.ecom .d-socials a{color:#fff;text-decoration:none;font-weight:600}
+.ecom .d-socials a:hover{text-decoration:underline}

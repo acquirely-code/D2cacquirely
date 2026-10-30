@@ -1,5 +1,6 @@
-import FrontomePage from "@/components/homepreview/page";
+import Landing from "@/app/ecommerce/Landing";
+import markup from "./markup";
 
 export default function HomePage() {
-  return <FrontomePage />;
+  return <Landing markup={markup} />;
 }

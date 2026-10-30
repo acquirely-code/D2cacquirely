@@ -1,4 +1,6 @@
-import AgencyLandingPage from "@/components/AgencyLandingPage";
-export default function HomePage() {
-  return <AgencyLandingPage />;
+import Landing from "./Landing";
+import markup from "./markup";
+
+export default function EcommercePage() {
+  return <Landing markup={markup} />;
 }
